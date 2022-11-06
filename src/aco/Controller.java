@@ -99,18 +99,18 @@ public class Controller {
     	int indexTour = 0;
     	int tourLength = 0;
     	int node = 0, startPos = 0, count = 0;
-    	
+    	// 对每条路径都进行下属的是否有新节点需要被提交的检查
     	while (indexTour < bestAnt.usedVehicles) {
     		if (count >= 50) {
     			System.out.println("Index tour=" + indexTour + ", used vehicles=" + bestAnt.usedVehicles + ", tour length=" + tourLength);
     		}
     		
-    		//skip for already committed nodes跳过已经提交的节点
+    		//skip for already committed nodes  跳过已经提交的节点
     		tourLength = bestAnt.tours.get(indexTour).size();
     		startPos = getLastCommitedPos(indexTour);
     		for (int i = startPos + 1; i < tourLength - 1; i++) {
     			node = bestAnt.tours.get(indexTour).get(i);
-    			//check condition for a node to be committed检查节点提交的条件
+    			//check condition for a node to be committed  检查节点提交的条件
     			if (bestAnt.beginService[node + 1] <= indexTimeSlice * lengthTimeSlice) {
     				if (!Ants.committedNodes[node]) {
     					return true;
@@ -207,18 +207,19 @@ public class Controller {
        ArrayList<Integer> lastCommitedIndexes;
        double sum;
        
-       for (int trial = 0; trial < 1; trial++) {
+       for (int trial = 0; trial < 5; trial++) {
     	 //reads benchmark data; read the data from the input file
     	 String dvrptwInstance = vrpInstance + "-" + dynamicLevel;
     	 String fileName = dvrptwInstance + ".txt";
 		 DataReader reader = new DataReader(fileName);
          //read the data from the file
          VRPTW vrpInstance = reader.read();
-	        
+
          System.out.println("DVRPTW_ACS MinSum >> Solving dynamic VRPTW instance: " + dvrptwInstance);
          //include in the counting also the depot, which is assumed to be apriori known
-         countApriori = vrpInstance.getIdAvailableRequests().size();
-         System.out.println("No. of customers' requests (except the depot): " +  VRPTW.n + ", among which " + countApriori + " are apriori known (available nodes excluding the depot) and " + vrpInstance.getDynamicRequests().size() + " are dynamic requests");  
+         countApriori = vrpInstance.getIdAvailableRequests().size();  // 读取先验已知节点请求
+		 int dynamicReqs = vrpInstance.getDynamicRequests().size();  // 读取了动态请求的数量
+		 System.out.println("No. of customers' requests (except the depot): " +  VRPTW.n + ", among which " + countApriori + " are apriori known (available nodes excluding the depot) and " + dynamicReqs + " are dynamic requests");
 		 
 		 //compute the scaling value with which we can scale all time-related values
 		 Request depotReq = vrpInstance.getRequests().get(0);
@@ -257,14 +258,14 @@ public class Controller {
 		 
 		 int[][][] result = new int[2][][];
 		 result = VRPTW.compute_nn_lists(vrpInstance);
-		 VRPTW.instance.nn_list = result[0];
-		 VRPTW.instance.nn_list_all = result[1];
+		 VRPTW.instance.nn_list = result[0]; // 存储每个节点的cl个最近候选节点，不包含仓库。
+		 VRPTW.instance.nn_list_all = result[1];  // 存储每个节点的cl个最近候选节点，包含仓库。
 		
 		 Ants.pheromone = new double[VRPTW.n + 1][VRPTW.n + 1];
 		 //Ants.total = new double[MTsp.n + 1][MTsp.n + 1];
 		 
-		 //VRPTW_ACS.generateInitialWeights();
-		 VRPTW_ACS.init_try(vrpInstance); 
+//		 VRPTW_ACS.generateInitialWeights();  // 随机产生3个权重，在计算m_ij时使用。
+		 VRPTW_ACS.init_try(vrpInstance);   // 利用m_ij来生成一个初始解
    
 		 currentTimeSlice = 1;
 		 idLastAvailableNode = 0;
@@ -272,7 +273,7 @@ public class Controller {
 		 InOut.noEvaluations = 0;
 		 InOut.noSolutions = 0;
          double lengthTimeSlice = (double)workingDay / (double)noTimeSlices;
-         startTime = System.currentTimeMillis();
+         startTime = System.currentTimeMillis(); // 工作日从这个点开始计时
        
 	     //start the ant colony
 	     VRPTW_ACS worker = new VRPTW_ACS(threadStopped, vrpInstance);
@@ -289,11 +290,18 @@ public class Controller {
     	   /*if (currentTimeSlice >= 30) {
     		   System.out.println("Trial " + (trial + 1) + " Before if: computed current time=" + currentTime + " currentTimeSlice=" + currentTimeSlice + " lengthTimeSlice=" + lengthTimeSlice);
     	   }*/
-    	   //did a new time slice started?
+    	   //did a new time slice started?  // 判断当前时间片是否结束，新的时间片开始
+
+//			 if (currentTime>10 && currentTime <=10.1){
+//				 System.out.println("够硬");
+//			 }
+
+			 // 判断当前时间片是否结束？
     	   if (currentTime > currentTimeSlice * lengthTimeSlice) {
+			   System.out.println("时间片结束！\n");
 			   //advance to next time slice
     		   System.out.println("Trial " + (trial + 1) + "; Current time (seconds): " + currentTime + "; new time slice started at " + currentTimeSlice * lengthTimeSlice);
-			   //check if there are new nodes that became available in the last time slice检查在最近的时间片中是否有可用的新节点
+			   //check if there are new nodes that became available in the last time slice // 检查在最近的时间片中是否有可用的新节点
 			   newAvailableIdNodes = countNoAvailableNodes(dynamicRequests, currentTime);
 			   //mark the fact that new nodes (from the list of dynamic customer requests) are available标记新节点(来自动态客户请求列表)可用的事实
 			   int countNodes = newAvailableIdNodes.size();
@@ -318,7 +326,7 @@ public class Controller {
 				   //System.out.println("Need to stop ant colony..isNewNodesAvailable=" + isNewNodesAvailable + " isNewNodesCommitted=" + isNewNodesCommitted);
 				   //stop the execution of the ant colony thread
 				   if (t != null) {
-	    			   worker.terminate();
+	    			   worker.terminate(); // 蚁群系统优化结束
 		    		   //wait for the thread to stop
 		    		   try {
 		    			   t.join();
@@ -348,7 +356,7 @@ public class Controller {
 			   //如果有新的可用节点，则更新可用/已知节点列表(客户请求)
 			   if (isNewNodesAvailable) {
 				   System.out.print(countNodes + " new nodes became available (known): ");
-				   idKnownRequests = vrpInstance.getIdAvailableRequests();
+				   idKnownRequests = vrpInstance.getIdAvailableRequests();  // 得到当前所有的可用节点（包括已提交的）
 				   for (int id : newAvailableIdNodes) {
 					   idKnownRequests.add(id);
 					   System.out.print((id + 1) + " ");
@@ -357,15 +365,15 @@ public class Controller {
 				   System.out.println();
 				   System.out.println("Number of total available (known) nodes (excluding the depot): " + idKnownRequests.size());
 
-				   //insert new available nodes in the best so far solution在迄今为止最好的解决方案中插入新的可用节点
+				   //insert new available nodes in the best so far solution, 在迄今为止最好的解决方案中插入新的可用节点
 				   Ants.best_so_far_ant.toVisit = countNodes;
-				   //determine nodes that are not visited yet in the current ant's solution确定当前蚂蚁的解决方案中尚未访问的节点
+				   //determine nodes that are not visited yet in the current ant's solution, 确定当前蚂蚁的解决方案中尚未访问的节点
 				   ArrayList<Integer> unroutedList = Ants.unroutedCustomers(Ants.best_so_far_ant, vrpInstance);
-				   //skip over committed (defined) nodes when performing insertion heuristic执行插入启发式时跳过已提交(已定义)节点
+				   //skip over committed (defined) nodes when performing insertion heuristic, 执行插入启发式时跳过已提交(已定义)节点
 				   lastCommitedIndexes = new  ArrayList<Integer>();
 				   for (int index = 0; index < Ants.best_so_far_ant.usedVehicles; index++) {
 					   lastPos = getLastCommitedPos(index);
-					   lastCommitedIndexes.add(lastPos);
+					   lastCommitedIndexes.add(lastPos);  // 拿到了每一条路径的尾巴节点
 				   }
 				   InsertionHeuristic.insertUnroutedCustomers(Ants.best_so_far_ant, vrpInstance, unroutedList, 0, lastCommitedIndexes);
 				   //System.out.println("After first applying insertion heuristic: Cities to be visited in the best so far solution: " + Ants.best_so_far_ant.toVisit);
@@ -384,11 +392,11 @@ public class Controller {
 						//Ants.lastCommitted.add(indexTour, 0);
 
 						//try to add as many unvisited cities/nodes as possible in this newly created tour
-						//following the nearest neighbour heuristic尝试在这个新创建的旅程中，按照最近的邻居启发法添加尽可能多的未访问的城市/节点
-						Ants.choose_closest_nn(Ants.best_so_far_ant, indexTour, vrpInstance);
+						//following the nearest neighbour heuristic 尝试在这个新创建的旅程中，按照最近的邻居启发法添加尽可能多的未访问的城市/节点
+						Ants.choose_closest_nn(Ants.best_so_far_ant, indexTour, vrpInstance); // 把插不进去的节点通过最近邻启发式插入到当前解中
 						//System.out.println("After adding new tour & NN tour construction: Cities to be visited in the best so far solution: " + Ants.best_so_far_ant.toVisit);
 
-						//try to insert remaining cities using insertion heuristic尝试使用插入启发式方法插入剩余城市
+						//try to insert remaining cities using insertion heuristic 尝试使用插入启发式方法插入剩余城市
 						if (Ants.best_so_far_ant.toVisit > 0) {
 							 //determine nodes that are not visited yet in the current ant's solution确定当前蚂蚁的解决方案中尚未访问的节点
 							 unroutedList = Ants.unroutedCustomers(Ants.best_so_far_ant, vrpInstance);
@@ -408,6 +416,8 @@ public class Controller {
 					   Ants.best_so_far_ant = VRPTW_ACS.local_search(Ants.best_so_far_ant, vrpInstance);
 				   }*/
 
+
+				   // 秋当前最佳蚂蚁的路径总长
 				   sum = 0.0;
 				   for (int i = 0; i < Ants.best_so_far_ant.usedVehicles; i++) {
 					   Ants.best_so_far_ant.tour_lengths.set(i, VRPTW.compute_tour_length_(Ants.best_so_far_ant.tours.get(i)));
@@ -431,7 +441,7 @@ public class Controller {
 						System.out.println();
 				  }*/
 			   }
-			   System.out.println(Ants.best_so_far_ant);
+			   System.out.println("蚁群优化前的当前最优解："+Ants.best_so_far_ant);
         	   currentTimeSlice++;
            }
 
@@ -458,7 +468,7 @@ public class Controller {
 	    	  break;
 	       }
 
-         } while(true);
+         } while(true);  // 死循环，只有当前时间超过工作日，才会中断。
            
          //working day is over
     	//System.out.println("End of working day.." + currentTime);
@@ -486,7 +496,7 @@ public class Controller {
         double scalledValue = 0.0;
 		if (scalingValue != 0) {
 			scalledValue = Ants.best_so_far_ant.total_tour_length / scalingValue;
-		}
+		}  // 计算当前最优解的总路径长度
 	    System.out.println("最终Final best solution >> No. of used vehicles=" + Ants.best_so_far_ant.usedVehicles + " total tours length=" + Ants.best_so_far_ant.total_tour_length + " (scalled value = " + scalledValue + ")");
 	    for (int i = 0; i < Ants.best_so_far_ant.usedVehicles; i++) {
 			int tourLength = Ants.best_so_far_ant.tours.get(i).size();

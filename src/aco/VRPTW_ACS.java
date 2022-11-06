@@ -280,8 +280,8 @@ public class VRPTW_ACS implements Runnable {
 		    		//choose for each ant in a probabilistic way by some type of roullette wheel selection 
 					//which salesman to consider next, that will visit a city
 		    		//salesman = (int)(Math.random() * MTsp.m);
-					values = Ants.neighbour_choose_and_move_to_next(Ants.ants[k], instance);
-					if (values[0] != -1) {
+					values = Ants.neighbour_choose_and_move_to_next(Ants.ants[k], instance);  // 选择一个车辆和其下一个节点。
+					if (values[0] != -1) {  // -1 是仓库
 						if (Ants.acs_flag)
 							Ants.local_acs_pheromone_update(Ants.ants[k], values[1]);
 					}
@@ -296,7 +296,7 @@ public class VRPTW_ACS implements Runnable {
 		double longestTourLength;
 		int idLongestTour = 0;
 		for (k = 0; k < Ants.n_ants; k++) {
-			InOut.noSolutions++;
+			InOut.noSolutions++; // 可行解的数量+1
 			longestTourLength = Double.MIN_VALUE;
 			for (int i = 0; i < Ants.ants[k].usedVehicles; i++) {
 				step = Ants.ants[k].tours.get(i).size();
@@ -322,6 +322,7 @@ public class VRPTW_ACS implements Runnable {
     }
 
     //initialize variables appropriately when starting a trial
+	// 应该是获得第一个时间片的第一轮的初始解
     static void init_try(VRPTW instance) {
 
 		Timer.start_timers();
@@ -351,20 +352,22 @@ public class VRPTW_ACS implements Runnable {
 		    Ants.init_pheromone_trails(Ants.trail_0);
 		}
 		if (Ants.acs_flag) {
-			noAvailableNodes = instance.getIdAvailableRequests().size();
+			noAvailableNodes = instance.getIdAvailableRequests().size();  // 得到当前时间的可用节点数量，此处时先验节点
 			//if no cities are available except the depot, set the pheromone levels to a static value
 			if (noAvailableNodes == 0) {
 				Ants.trail_0 = 1.0;
 			}
-			else {
+			else {  // 得到信息素矩阵的t_0，τ0 = (nav · LNN )−1
+				// 先利用最近零启发式得到一个初始最优解，并且进一步计算出总距离LNN，在论文中用于初始化信息素t0
 				Ants.trail_0 = 1. / ((double) (noAvailableNodes + 1) * (double) Ants.nn_tour(instance));
 			}
 		    Ants.init_pheromone_trails(Ants.trail_0);
 		}
 	
 		/* Calculate combined information Ants.pheromone times heuristic information */
-		//Ants.compute_total_information();
-		
+//		Ants.compute_total_information();
+		System.out.println("Init-try后的当前最优解："+Ants.best_so_far_ant);
+
     }
     
     //apply to each solution constructed by a ant, a local search phase to further improve the solution
@@ -1729,8 +1732,11 @@ public class VRPTW_ACS implements Runnable {
 			if (counter > 300) {
 				isRunning = false;
 			}
-	    	 
+
 	    }
+
+		// 打印经过300词蚁群优化之后的，最优蚂蚁。
+		System.out.println("经过蚁群优化后的当前最优解："+Ants.best_so_far_ant);
 	    //System.out.println("Counter=" + counter + "; After terminating work in thread: best solution is >> No. of used vehicles=" + Ants.best_so_far_ant.usedVehicles + " total tours length=" + Ants.best_so_far_ant.total_tour_length);
 	}
 

@@ -280,8 +280,8 @@ public class InOut {
     	if (Ants.n_ants < 0)
     		Ants.n_ants = VRPTW.n;
  
-    	VRPTW.instance.distance = VRPTW.compute_distances(scalingValue);
-    	Ants.allocate_ants(instance);
+    	VRPTW.instance.distance = VRPTW.compute_distances(scalingValue);  // d_ij距离矩阵
+    	Ants.allocate_ants(instance);  // 分配所有的蚂蚁数组对象、当前最优蚂蚁对象
     }
 
 }

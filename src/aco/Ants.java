@@ -225,9 +225,10 @@ public class Ants {
 		best_so_far_ant.longest_tour_length = Double.MAX_VALUE;
 		
 		best_so_far_ant.costObjectives = new double[2];
-	    for (int indexObj = 0; indexObj < 2; indexObj++) {
-	    	best_so_far_ant.costObjectives[indexObj] = 0;
-    	}
+		Arrays.fill(best_so_far_ant.costObjectives, 0);
+//	    for (int indexObj = 0; indexObj < 2; indexObj++) {
+//	    	best_so_far_ant.costObjectives[indexObj] = 0;
+//    	}
 	    best_so_far_ant.earliestTime = new ArrayList(best_so_far_ant.usedVehicles);
 	    best_so_far_ant.latestTime = new ArrayList(best_so_far_ant.usedVehicles);
 	    
@@ -278,7 +279,7 @@ public class Ants {
 		min1 = ants[0].usedVehicles;
 		for (k1 = 1; k1 < n_ants; k1++) {
 		    if (ants[k1].usedVehicles < min1) {
-				min1 = ants[k1].usedVehicles;
+				min1 = ants[k1].usedVehicles;  // 选出车辆使用最少的蚂蚁
 		    }
 		}
 		
@@ -287,7 +288,7 @@ public class Ants {
 		k2_min = 0;
 		for (k2 = 0; k2 < n_ants; k2++) {
 			if (ants[k2].usedVehicles == min1) {
-				if (ants[k2].total_tour_length < min2) {
+				if (ants[k2].total_tour_length < min2) {  // 从使用车辆最少的蚂蚁中，去选择距离最短的蚂蚁
 					min2 = ants[k2].total_tour_length;
 					k2_min = k2;
 			    }
@@ -655,7 +656,7 @@ public class Ants {
 		else {
 			startPos = 0;
 		}
-		
+		// 选择车辆和下一个城市
 		for (int indexSalesman = startPos; indexSalesman < a.usedVehicles; indexSalesman++) {
 			int lastPos = a.tours.get(indexSalesman).size() - 1;
 			current_city = a.tours.get(indexSalesman).get(lastPos);
@@ -722,7 +723,7 @@ public class Ants {
 		if (next_city == VRPTW.n) {
 		    // all cities in nearest neighbor list were already visited 
 		    values = choose_best_next(a, vrp);
-		    return values;
+		    return values;  // 返回车辆索引和下一个城市索引
 		}
 		else {
 			a.tours.get(salesman).add(next_city);
@@ -738,7 +739,8 @@ public class Ants {
 		}
 		
     }
-    
+
+	// 复用前边的面向时间的最近邻插入启发式算法，将这些插不进去的节点插进当前最优解里
     static void choose_closest_nn(Ant a, int indexSalesman, VRPTW vrp)
     {
 		int current_city, next_city, indexTour;
@@ -813,11 +815,11 @@ public class Ants {
 		int current_city, next_city, indexTour;
 	    double distance, distanceDepot, arrivalTime, arrivalTimeDepot, beginService, beginServiceDepot;
 	    double timeDiference, deliveryUrgency, bestBeginService = 0, minValue, metricValue;
-	    ArrayList<Request> reqList = vrp.getRequests();
-	    ArrayList<Integer> idKnownRequests = vrp.getIdAvailableRequests();
+	    ArrayList<Request> reqList = vrp.getRequests();  // 得到所有请求
+	    ArrayList<Integer> idKnownRequests = vrp.getIdAvailableRequests();  // 得到当前的可用请求
 	    
 		next_city = VRPTW.n;
-		int lastPos = a.tours.get(indexSalesman).size() - 1;
+		int lastPos = a.tours.get(indexSalesman).size() - 1;  // 此处旅行商idx和车辆idx和路径idx，三者实际上是一个东西。
 		current_city = a.tours.get(indexSalesman).get(lastPos);
 		current_city++;
 		
@@ -830,7 +832,7 @@ public class Ants {
 		    	arrivalTime = a.currentTime.get(indexSalesman) + reqList.get(current_city).getServiceTime() + distance; 
 		    	beginService = Math.max(arrivalTime, reqList.get(city + 1).getStartWindow());
 		    	
-		    	distanceDepot = VRPTW.instance.distance[city + 1][0];
+		    	distanceDepot = VRPTW.instance.distance[city + 1][0]; // 城市返回仓库的距离
 		    	arrivalTimeDepot = beginService + reqList.get(city + 1).getServiceTime() + distanceDepot;
 		    	beginServiceDepot = Math.max(arrivalTimeDepot, reqList.get(0).getStartWindow());
 		    	
@@ -847,8 +849,9 @@ public class Ants {
 			    		metricValue = weight1 * distance + weight2 * timeDiference + weight3 * deliveryUrgency;
 			    	}*/
 		    		//metricValue = 0.5 * distance + 0.3 * timeDiference + 0.2 * deliveryUrgency;
-		    		//metricValue = initialWeight1 * distance + initialWeight2 * timeDiference + initialWeight3 * deliveryUrgency;
-		    		metricValue = weight1 * distance + weight2 * timeDiference + weight3 * deliveryUrgency;
+		    		//metricValue = initialWeight1 * distance + initialWeight2 * timeDiference + initialWeight3 * deliveryUrgency
+					// m_ij
+					metricValue = weight1 * distance + weight2 * timeDiference + weight3 * deliveryUrgency;
 		    		
 					if (metricValue < minValue) {
 					    next_city = city;
@@ -863,6 +866,9 @@ public class Ants {
 		//the customers not visited yet
 	    //when no more customer with feasible insertions can be found, start a new route/tour and add 
 		//one more vehicle for constructing a feasible solution
+
+		// todo: 下面这个注释不确定是不是正确的
+		// 如果此时下一城是是最后一个（此处的VRPTW数据集已经按照可用时间升序排序过了），即最后一个可用节点，下一步准备返回仓库
 		if (next_city == VRPTW.n) {
 			//System.out.println("Cities to be visited: " + a.toVisit);
 			
@@ -918,7 +924,7 @@ public class Ants {
 		     * of q_0 = 0.0 to have to compute a random number, which is
 		     * expensive computationally
 		     */
-		    values = neighbour_choose_best_next(a, vrp);
+		    values = neighbour_choose_best_next(a, vrp); // 选择一辆车，和该车的下一个节点。
 		    //values = choose_best_next(a, vrp);
 		    return values; 
 		}
@@ -1202,7 +1208,8 @@ public class Ants {
     }
 
     //generate a nearest neighbor tour and compute tour length using only the available nodes (nodes known so far)
-    static double nn_tour(VRPTW instance) {
+    // 使用最近邻搜索启发式算法，计算当前的最优解，
+	static double nn_tour(VRPTW instance) {
     	int step, salesman = 0;
     	double sum = 0, sum1 = 0, scalledValue = 0, noVehicles = 1.0;
     	
@@ -1217,13 +1224,14 @@ public class Ants {
     	}
 		
     	//there are still left available (known) cities to be visited
-		while (ants[0].toVisit > 0) {  	
+		while (ants[0].toVisit > 0) { // 在这个迭代中，会有新的车辆/路径/旅行商，被添加。
 			salesman = ants[0].usedVehicles - 1;
-			choose_closest_next(ants[0], salesman, instance);	 
+			choose_closest_next(ants[0], salesman, instance);
 		}
 		
 		System.out.println("Cities to be visited: " + ants[0].toVisit);
-		
+
+		// 计算当前解的路径长度
 		int nrTours = ants[0].usedVehicles;
 		for (int i = 0; i < nrTours; i++) {
 			step = ants[0].tours.get(i).size();
@@ -1235,11 +1243,11 @@ public class Ants {
 		ants[0].total_tour_length = sum1;
 		
 		if (VRPTW_ACS.ls_flag) {
-			//ants[0] = VRPTW_ACS.local_search(ants[0], instance);
+//			ants[0] = VRPTW_ACS.local_search(ants[0], instance);
 			ants[0] = VRPTW_ACS.relocateMultipleRouteIterated(ants[0], instance);
 			ants[0] = VRPTW_ACS.exchangeMultipleRouteIterated(ants[0], instance);
 			
-			//compute new distances and update longest tour计算新的距离并更新最长行程
+			//compute new distances and update longest tour  计算新的距离并更新最长行程
 			for (int l = 0; l < ants[0].usedVehicles; l++) {
 				ants[0].tour_lengths.set(l, VRPTW.compute_tour_length(ants[0].tours.get(l)));
 				sum += ants[0].tour_lengths.get(l);
@@ -1251,7 +1259,7 @@ public class Ants {
 			lastCommitted.add(j, 0);  
 		}*/
 		
-		//System.out.println("Initial (nearest neighbour tour) longest tour length: " + longestTourLength);
+//		System.out.println("Initial (nearest neighbour tour) longest tour length: " + longestTourLength);
 		double scalingValue = Controller.getScalingValue();
 		if (scalingValue != 0) {
 			scalledValue = ants[0].total_tour_length / scalingValue;

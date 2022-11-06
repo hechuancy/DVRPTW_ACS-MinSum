@@ -245,7 +245,7 @@ public class VRPTW {
 		double matrix[][] = new double[size + 1][size + 1];
 		
 		for (i = 0; i < size + 1; i++) {			
-		    for (j = 0; j < size + 1; j++) {
+		    for (j = 0; j < size + 1; j++) {  // todo: 在此处添加为曼哈顿距离
 				if (InOut.distance_type == Distance_type.ATT) {
 				    matrix[i][j] = att_distance(i, j);
 				} else if (InOut.distance_type == Distance_type.CEIL_2D) {
@@ -264,6 +264,7 @@ public class VRPTW {
     }
 
     //computes nearest neighbor lists of depth nn for each city
+	// 对数据集中的所有节点都要计算其最近的20个邻居
     static int[][][] compute_nn_lists(VRPTW vrp) {
 		int i, node, nn, count1, count2;
 	

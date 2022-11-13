@@ -1,14 +1,6 @@
 package aco;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -665,111 +657,111 @@ public class Utilities {
 			    
 	    }
     }
-    
-    static void writeParetoSet(ArrayList<Ant> bestSoFarPareto, int trial) {
-    	Row r;
-    	Cell c;
-    	int lineNumber = 0;
-    	
-    	//filePath1 += InOut.max_iterations + " iter (ACO MinMax_vers noua).xlsx";
-    	//System.out.println("file path=" + filePath1);
-    	 
-    	//the file already exists; we should add a new row as the last one in the Excel file
-	    if (new File(filePath1).canRead()) {
-	    	//System.out.println("File already exists..");
-	    	try {
-		    	FileInputStream file = new FileInputStream(new File(filePath1));
-		    	
-		    	//Create Workbook instance holding reference to .xlsx file
-	            XSSFWorkbook workbook1 = new XSSFWorkbook(file);
-	 
-	            //Get first/desired sheet from the workbook
-	            XSSFSheet sheet1 = workbook1.getSheetAt(trial);
-	            
-	            //write table header cells
-	            r = sheet1.getRow(lineNumber); 
-	            if (r == null) {
-	               // First cell in the row, create
-	               r = sheet1.createRow(lineNumber);
-	            }
-	            c = r.getCell(0); 
-	            if (c == null) {
-	                // New cell
-	                c = r.createCell(0);
-	            }
-	            c.setCellValue("Point #");   
-	            c = r.getCell(1); 
-	            if (c == null) {
-	                // New cell
-	                c = r.createCell(1);
-	            }
-	            c.setCellValue("Total tours length");            
-	            c = r.getCell(2); 
-	            if (c == null) {
-	                // New cell
-	                c = r.createCell(2);
-	            }
-	            c.setCellValue("Amplitude of tours");	            
-	            c = r.getCell(3); 
-	            if (c == null) {
-	                // New cell
-	                c = r.createCell(3);
-	            }
-	            c.setCellValue("List with cost of subtours");	
-	            
-	            lineNumber++;
-	            for (int i = 0; i < bestSoFarPareto.size(); i++) {
-	            	r = sheet1.getRow(i + lineNumber); 
-		            if (r == null) {
-		               // First cell in the row, create
-		               r = sheet1.createRow(i + lineNumber);
-		            }
-		            //write point id
-		            c = r.getCell(0); 
-		            if (c == null) {
-		                // New cell
-		                c = r.createCell(0, Cell.CELL_TYPE_NUMERIC);
-		            }
-		            c.setCellValue(i + 1);
-		            //write total cost and amplitude
-	            	for (int indexObj = 0; indexObj < 2; indexObj++) {
-	            		c = r.getCell(indexObj + 1); 
-			            if (c == null) {
-			                // New cell
-			                c = r.createCell(indexObj + 1, Cell.CELL_TYPE_NUMERIC);
-			            }
-			            c.setCellValue(bestSoFarPareto.get(i).costObjectives[indexObj]);
-	            	}
-	            	//write cost of each individual subtour
-		            for (int j = 0; j < bestSoFarPareto.get(i).tour_lengths.size(); j++) {
-			            c = r.getCell(j + 3); 
-			            if (c == null) {
-			                // New cell
-			                c = r.createCell(j + 3);
-			            }
-			            c.setCellValue(bestSoFarPareto.get(i).tour_lengths.get(j));
-		            }
-	            }
-    
-				//Write the workbook in file system
-			    FileOutputStream out = new FileOutputStream(new File(filePath1));
-			    workbook1.write(out);
-			    out.close();
-			    
-			    //System.out.println("\nWritten Pareto front points successfully on disk.\n");
-			    int nrOfRun = trial + 1;
-			    System.out.println("\nRun #" + nrOfRun + " written Pareto front points successfully on disk.\n");
-	    	}
-			catch (Exception e) {
-			    e.printStackTrace();
-			}
-
-	    }
-	    else {
-	    	System.out.println(" File " + filePath1 + " doesn't exists" );
-	    }
-
-    }
+//
+//    static void writeParetoSet(ArrayList<Ant> bestSoFarPareto, int trial) {
+//    	Row r;
+//    	Cell c;
+//    	int lineNumber = 0;
+//
+//    	//filePath1 += InOut.max_iterations + " iter (ACO MinMax_vers noua).xlsx";
+//    	//System.out.println("file path=" + filePath1);
+//
+//    	//the file already exists; we should add a new row as the last one in the Excel file
+//	    if (new File(filePath1).canRead()) {
+//	    	//System.out.println("File already exists..");
+//	    	try {
+//		    	FileInputStream file = new FileInputStream(new File(filePath1));
+//
+//		    	//Create Workbook instance holding reference to .xlsx file
+//	            XSSFWorkbook workbook1 = new XSSFWorkbook(file);
+//
+//	            //Get first/desired sheet from the workbook
+//	            XSSFSheet sheet1 = workbook1.getSheetAt(trial);
+//
+//	            //write table header cells
+//	            r = sheet1.getRow(lineNumber);
+//	            if (r == null) {
+//	               // First cell in the row, create
+//	               r = sheet1.createRow(lineNumber);
+//	            }
+//	            c = r.getCell(0);
+//	            if (c == null) {
+//	                // New cell
+//	                c = r.createCell(0);
+//	            }
+//	            c.setCellValue("Point #");
+//	            c = r.getCell(1);
+//	            if (c == null) {
+//	                // New cell
+//	                c = r.createCell(1);
+//	            }
+//	            c.setCellValue("Total tours length");
+//	            c = r.getCell(2);
+//	            if (c == null) {
+//	                // New cell
+//	                c = r.createCell(2);
+//	            }
+//	            c.setCellValue("Amplitude of tours");
+//	            c = r.getCell(3);
+//	            if (c == null) {
+//	                // New cell
+//	                c = r.createCell(3);
+//	            }
+//	            c.setCellValue("List with cost of subtours");
+//
+//	            lineNumber++;
+//	            for (int i = 0; i < bestSoFarPareto.size(); i++) {
+//	            	r = sheet1.getRow(i + lineNumber);
+//		            if (r == null) {
+//		               // First cell in the row, create
+//		               r = sheet1.createRow(i + lineNumber);
+//		            }
+//		            //write point id
+//		            c = r.getCell(0);
+//		            if (c == null) {
+//		                // New cell
+//		                c = r.createCell(0, Cell.CELL_TYPE_NUMERIC);
+//		            }
+//		            c.setCellValue(i + 1);
+//		            //write total cost and amplitude
+//	            	for (int indexObj = 0; indexObj < 2; indexObj++) {
+//	            		c = r.getCell(indexObj + 1);
+//			            if (c == null) {
+//			                // New cell
+//			                c = r.createCell(indexObj + 1, Cell.CELL_TYPE_NUMERIC);
+//			            }
+//			            c.setCellValue(bestSoFarPareto.get(i).costObjectives[indexObj]);
+//	            	}
+//	            	//write cost of each individual subtour
+//		            for (int j = 0; j < bestSoFarPareto.get(i).tour_lengths.size(); j++) {
+//			            c = r.getCell(j + 3);
+//			            if (c == null) {
+//			                // New cell
+//			                c = r.createCell(j + 3);
+//			            }
+//			            c.setCellValue(bestSoFarPareto.get(i).tour_lengths.get(j));
+//		            }
+//	            }
+//
+//				//Write the workbook in file system
+//			    FileOutputStream out = new FileOutputStream(new File(filePath1));
+//			    workbook1.write(out);
+//			    out.close();
+//
+//			    //System.out.println("\nWritten Pareto front points successfully on disk.\n");
+//			    int nrOfRun = trial + 1;
+//			    System.out.println("\nRun #" + nrOfRun + " written Pareto front points successfully on disk.\n");
+//	    	}
+//			catch (Exception e) {
+//			    e.printStackTrace();
+//			}
+//
+//	    }
+//	    else {
+//	    	System.out.println(" File " + filePath1 + " doesn't exists" );
+//	    }
+//
+//    }
 
     //save in a .txt output file the best solution resulted after a run to be later used when
     //computing the Pareto front
@@ -944,7 +936,24 @@ public class Utilities {
 			    
 	    }
     }
-    
+
+
+	public static void write300AntIterationSolution(String path, int counter) {
+		try {
+			File f = new File(path);
+			FileOutputStream fop = null;
+			fop = new FileOutputStream(f, true); // 构建FileOutputStream对象,文件不存在会自动新建
+			OutputStreamWriter writer = new OutputStreamWriter(fop, "UTF-8"); // 构建OutputStreamWriter对象,参数可以指定编码,默认为操作系统默认编码,windows上是gbk
+			String print_str = counter + ":\n" + Ants.best_so_far_ant.toString();
+			writer.append(print_str); // 写入到缓冲区
+			writer.append("\n\n"); // 换行
+			writer.close(); // 关闭写入流,同时会把缓冲区内容写入文件,所以上面的注释掉
+			fop.close(); // 关闭输出流,释放系统资源
+
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
 
 	public static String[] getTours() {
 		return tours;

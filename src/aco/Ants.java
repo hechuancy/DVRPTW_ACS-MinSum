@@ -60,22 +60,22 @@ public class Ants {
 
 		@Override
 		public String toString() {
-			return "Ant{" +
-					"tours=" + tours +
-					", visited=" + Arrays.toString(visited) +
-					", tour_lengths=" + tour_lengths +
-					", beginService=" + Arrays.toString(beginService) +
-					", usedVehicles=" + usedVehicles +
-					", currentTime=" + currentTime +
-					", earliestTime=" + earliestTime +
-					", latestTime=" + latestTime +
-					", currentQuantity=" + currentQuantity +
-					", total_tour_length=" + total_tour_length +
-					", longest_tour_length=" + longest_tour_length +
-					", indexLongestTour=" + indexLongestTour +
-					", toVisit=" + toVisit +
-					", costObjectives=" + Arrays.toString(costObjectives) +
-					", addedEmptyTour=" + addedEmptyTour +
+			return "\nAnt{\n" +
+					"\ttours=" + tours + "\n" +
+					"\tvisited=" + Arrays.toString(visited) + "\n" +
+					"\ttour_lengths=" + tour_lengths + "\n" +
+					"\tbeginService=" + Arrays.toString(beginService) + "\n" +
+					"\tusedVehicles=" + usedVehicles + "\n" +
+					"\tcurrentTime=" + currentTime + "\n" +
+					"\tearliestTime=" + earliestTime + "\n" +
+					"\tlatestTime=" + latestTime + "\n" +
+					"\tcurrentQuantity=" + currentQuantity + "\n" +
+					"\ttotal_tour_length=" + total_tour_length + "\n" +
+					"\tlongest_tour_length=" + longest_tour_length + "\n" +
+					"\tindexLongestTour=" + indexLongestTour + "\n" +
+					"\ttoVisit=" + toVisit + "\n" +
+					"\tcostObjectives=" + Arrays.toString(costObjectives) + "\n" +
+					"\taddedEmptyTour=" + addedEmptyTour + "\n" +
 					'}';
 		}
 

@@ -457,8 +457,8 @@ public class Controller {
 						System.out.println();
 				  }*/
                     }
-                    System.out.println("蚁群优化前的当前最优解：" + Ants.best_so_far_ant);
-                    System.out.println("蚁群优化前的CommitNodes: " + Arrays.toString(Ants.committedNodes));
+//                    System.out.println("蚁群优化前的当前最优解：" + Ants.best_so_far_ant);
+//                    System.out.println("蚁群优化前的CommitNodes: " + Arrays.toString(Ants.committedNodes));
 
                     currentTimeSlice++;
                 }

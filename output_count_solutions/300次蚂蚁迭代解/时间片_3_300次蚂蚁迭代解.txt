@@ -1,0 +1,1428 @@
+1:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+2:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+3:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+4:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+5:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+6:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+7:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+8:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+9:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+10:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+11:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+12:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+13:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+14:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+15:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+16:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+17:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+18:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+19:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+20:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+21:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+22:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+23:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+24:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+25:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+26:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+27:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+28:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+29:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+30:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+31:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+32:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+33:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 46, -1], [-1, 66, 64, 62, 61, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 47, 49, 51, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 8.555222252450289, 4.173195933217379, 4.1276653654187365, 7.757662551037077, 9.290236406286077, 7.866275306235186, 11.555855646662398, 7.5892757740196775, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 80.0, 120.0, 190.0, 190.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.63244167098884
+	toVisit=0
+	costObjectives=[75.63244167098884, 7.445532806642206]
+	addedEmptyTour=false
+}
+
+34:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+35:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+36:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+37:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+38:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+39:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+40:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+41:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+42:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+43:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+44:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+45:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+46:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+47:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+48:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+49:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+50:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+51:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 93, 91, 92, 96, 98, 0, 74, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 60, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 58, 52, 55, 57, 59, 67, 68, -1], [-1, 31, 32, 30, 34, 36, 37, 38, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 1, 95, 94, 97, -1], [-1, 53, 71, 73, 83, 84, 87, 88, 90, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020189, 8.555222252450287, 4.819693084100435, 3.8484818277290933, 7.757662551037075, 8.851061175259305, 7.866275306235184, 11.555855646662401, 7.58927577401968, 10.606729595641802]
+	usedVehicles=10
+	currentQuantity=[170.0, 180.0, 110.0, 100.0, 190.0, 180.0, 190.0, 180.0, 170.0, 200.0]
+	total_tour_length=75.56058005315546
+	toVisit=0
+	costObjectives=[75.56058005315546, 7.707373818933307]
+	addedEmptyTour=false
+}
+
+1:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 84, 83, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 95, 94, 93, 91, 92, 96, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.583247818957246, 4.819693084100433, 4.613102258622622, 7.757662551037077, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.503092438572343, 7.623854573078148]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=67.03489438152693
+	toVisit=0
+	costObjectives=[67.03489438152693, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+2:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 84, 83, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 95, 94, 93, 91, 92, 96, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.583247818957246, 4.819693084100433, 4.613102258622622, 7.757662551037077, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.503092438572343, 7.623854573078148]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=67.03489438152693
+	toVisit=0
+	costObjectives=[67.03489438152693, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+3:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 84, 83, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 95, 94, 93, 91, 92, 96, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.583247818957246, 4.819693084100433, 4.613102258622622, 7.757662551037077, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.503092438572343, 7.623854573078148]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=67.03489438152693
+	toVisit=0
+	costObjectives=[67.03489438152693, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+4:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 84, 83, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 95, 94, 93, 91, 92, 96, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.583247818957246, 4.819693084100433, 4.613102258622622, 7.757662551037077, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.503092438572343, 7.623854573078148]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=67.03489438152693
+	toVisit=0
+	costObjectives=[67.03489438152693, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+5:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+6:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+7:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+8:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+9:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+10:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+11:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+12:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+13:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+14:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+15:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+16:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+17:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+18:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+19:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+20:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+21:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+22:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+23:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+24:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+25:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+26:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+27:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+28:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+29:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+30:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+31:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+32:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+33:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+34:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+35:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+36:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+37:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+38:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+39:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+40:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+41:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+42:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+43:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+44:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+45:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+46:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+47:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+48:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+49:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+50:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+
+51:
+
+Ant{
+	tours=[[-1, 19, 23, 24, 26, 28, 29, 27, 25, 22, 21, 20, -1], [-1, 89, 86, 85, 83, 84, 87, 88, 90, -1], [-1, 42, 41, 40, 39, 43, 44, 47, 49, 51, 46, -1], [-1, 66, 64, 62, 61, 73, 71, 60, 67, 68, -1], [-1, 12, 16, 17, 18, 14, 15, 13, 11, -1], [-1, 56, 54, 53, 52, 55, 57, 59, 58, -1], [-1, 31, 32, 30, 34, 37, 38, 36, 33, -1], [-1, 80, 77, 75, 70, 69, 72, 76, 78, 79, 81, 82, -1], [-1, 4, 2, 6, 7, 9, 8, 0, 74, -1], [-1, 97, 94, 93, 91, 92, 96, 95, 98, 1, -1]]
+	visited=[true, true, true, false, true, false, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, false, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+	tour_lengths=[4.110322840020191, 5.359111118773673, 4.819693084100433, 4.613102258622622, 7.757662551037074, 8.242926181388452, 8.225136989088046, 11.555855646662401, 4.5030924385723425, 7.781370076187606]
+	usedVehicles=10
+	currentQuantity=[170.0, 140.0, 110.0, 180.0, 190.0, 200.0, 190.0, 180.0, 110.0, 200.0]
+	total_tour_length=66.96827318445281
+	toVisit=0
+	costObjectives=[66.96827318445281, 7.44553280664221]
+	addedEmptyTour=false
+}
+

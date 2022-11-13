@@ -938,13 +938,13 @@ public class Utilities {
     }
 
 
-	public static void write300AntIterationSolution(String path, int counter) {
+	public static void write300AntIterationSolution(Ant ant,String path, int counter) {
 		try {
 			File f = new File(path);
 			FileOutputStream fop = null;
 			fop = new FileOutputStream(f, true); // 构建FileOutputStream对象,文件不存在会自动新建
 			OutputStreamWriter writer = new OutputStreamWriter(fop, "UTF-8"); // 构建OutputStreamWriter对象,参数可以指定编码,默认为操作系统默认编码,windows上是gbk
-			String print_str = counter + ":\n" + Ants.best_so_far_ant.toString();
+			String print_str = counter + ":\n" + ant.toString();
 			writer.append(print_str); // 写入到缓冲区
 			writer.append("\n\n"); // 换行
 			writer.close(); // 关闭写入流,同时会把缓冲区内容写入文件,所以上面的注释掉

@@ -87,7 +87,7 @@ public class VRPTW_ACS implements Runnable {
     /**
      * indicates whether local search is used in the ACO algorithm
      **/
-    public static boolean ls_flag = true;
+    public static boolean ls_flag = true;  // 两个局部搜索算子的总开关
 
     //indicates whether the thread was restarted from outside
     private boolean threadRestarted;
@@ -119,8 +119,7 @@ public class VRPTW_ACS implements Runnable {
         //check upper bound of the time window of the next customer to be visited &&
         //current capacity of the car && vehicle arrival time at the depot (the maximum total route time -> upper bound of the time window of the depot)
         currentQuantity = a.currentQuantity.get(indexSalesman) + reqList.get(city + 1).getDemand();
-        if (beginService <= reqList.get(city + 1).getEndWindow() && currentQuantity <= vrp.getCapacity()
-                && beginServiceDepot <= reqList.get(0).getEndWindow()) {
+        if (beginService <= reqList.get(city + 1).getEndWindow() && currentQuantity <= vrp.getCapacity() && beginServiceDepot <= reqList.get(0).getEndWindow()) {
             ok = true;
         }
         if (ok == false) {
@@ -288,8 +287,7 @@ public class VRPTW_ACS implements Runnable {
                     //salesman = (int)(Math.random() * MTsp.m);
                     values = Ants.neighbour_choose_and_move_to_next(Ants.ants[k], instance);  // 选择一个车辆和其下一个节点。
                     if (values[0] != -1) {  // -1 是仓库
-                        if (Ants.acs_flag)
-                            Ants.local_acs_pheromone_update(Ants.ants[k], values[1]);
+                        if (Ants.acs_flag) Ants.local_acs_pheromone_update(Ants.ants[k], values[1]);
                     }
 
                 }
@@ -315,8 +313,7 @@ public class VRPTW_ACS implements Runnable {
                     idLongestTour = i;
                 }
 
-                if (Ants.acs_flag)
-                    Ants.local_acs_pheromone_update(Ants.ants[k], i);
+                if (Ants.acs_flag) Ants.local_acs_pheromone_update(Ants.ants[k], i);
             }
             Ants.ants[k].longest_tour_length = longestTourLength;
             Ants.ants[k].indexLongestTour = idLongestTour;
@@ -646,8 +643,7 @@ public class VRPTW_ACS implements Runnable {
                                 }
 
                                 //if some improvement is obtained in the total traveled distance
-                                if ((temp.total_tour_length < bestImprovedAnt.total_tour_length)
-                                        || (temp.usedVehicles < bestImprovedAnt.usedVehicles)) {
+                                if ((temp.total_tour_length < bestImprovedAnt.total_tour_length) || (temp.usedVehicles < bestImprovedAnt.usedVehicles)) {
                                     Ants.copy_from_to(temp, bestImprovedAnt, instance);
                                 }
 
@@ -686,7 +682,7 @@ public class VRPTW_ACS implements Runnable {
     //relocateMultipleRouteIterated is performed multiple times until no further improvement (which minimizes most the
     //total traveled distance or reduces the number of used vehicles) is possible
     //跳过提交(定义)的节点,多次执行，直到没有进一步的改进为止,总行驶距离或减少二手车数量是可能的
-    static Ant relocateMultipleRouteIterated(Ant a, VRPTW instance) {
+    static Ant relocateMultipleRouteIterated(Ant tmp_best_so_far_ant, VRPTW instance) {
         boolean feasible = false;
         int city, sourcePrevCity, sourceNextCity = -2, destinationPrevCity, destinationNextCity;
         int startIndexSource, startIndexDestination;
@@ -697,26 +693,26 @@ public class VRPTW_ACS implements Runnable {
         double tempNo = Math.pow(10, 10);
         double round1, round2;
 
-        Ant improvedAnt = new Ant();
-        improvedAnt.tours = new ArrayList();
-        improvedAnt.tour_lengths = new ArrayList<Double>();
-        improvedAnt.beginService = new double[VRPTW.n + 1];
-        improvedAnt.currentTime = new ArrayList<Double>();
-        improvedAnt.currentQuantity = new ArrayList<Double>();
-        improvedAnt.usedVehicles = 1;
-        for (int j = 0; j < improvedAnt.usedVehicles; j++) {
-            improvedAnt.tours.add(j, new ArrayList<Integer>());
-            improvedAnt.tour_lengths.add(j, 0.0);
+        Ant bestImprovedAnt = new Ant();
+        bestImprovedAnt.tours = new ArrayList();
+        bestImprovedAnt.tour_lengths = new ArrayList<Double>();
+        bestImprovedAnt.beginService = new double[VRPTW.n + 1];
+        bestImprovedAnt.currentTime = new ArrayList<Double>();
+        bestImprovedAnt.currentQuantity = new ArrayList<Double>();
+        bestImprovedAnt.usedVehicles = 1;
+        for (int j = 0; j < bestImprovedAnt.usedVehicles; j++) {
+            bestImprovedAnt.tours.add(j, new ArrayList<Integer>());
+            bestImprovedAnt.tour_lengths.add(j, 0.0);
         }
-        improvedAnt.visited = new boolean[VRPTW.n];
+        bestImprovedAnt.visited = new boolean[VRPTW.n];
         //the another node is the depot, which is by default visited by each salesman and added in its tour
-        improvedAnt.toVisit = instance.getIdAvailableRequests().size();
-        improvedAnt.costObjectives = new double[2];
+        bestImprovedAnt.toVisit = instance.getIdAvailableRequests().size();
+        bestImprovedAnt.costObjectives = new double[2];
         for (int indexObj = 0; indexObj < 2; indexObj++) {
-            improvedAnt.costObjectives[indexObj] = 0;
+            bestImprovedAnt.costObjectives[indexObj] = 0;
         }
-        improvedAnt.earliestTime = new ArrayList(improvedAnt.usedVehicles);
-        improvedAnt.latestTime = new ArrayList(improvedAnt.usedVehicles);
+        bestImprovedAnt.earliestTime = new ArrayList(bestImprovedAnt.usedVehicles);
+        bestImprovedAnt.latestTime = new ArrayList(bestImprovedAnt.usedVehicles);
 
         Ant temp = new Ant();
         temp.tours = new ArrayList();
@@ -739,11 +735,11 @@ public class VRPTW_ACS implements Runnable {
         temp.earliestTime = new ArrayList(temp.usedVehicles);
         temp.latestTime = new ArrayList(temp.usedVehicles);
 
-        Ants.copy_from_to(a, improvedAnt, instance);
-        Ants.copy_from_to(a, temp, instance);
+        Ants.copy_from_to(tmp_best_so_far_ant, bestImprovedAnt, instance);
+        Ants.copy_from_to(tmp_best_so_far_ant, temp, instance);
 
         ArrayList<Integer> lastCommitedIndexes = new ArrayList<Integer>();
-        for (int index = 0; index < Ants.best_so_far_ant.usedVehicles; index++) {
+        for (int index = 0; index < Ants.best_so_far_ant.usedVehicles; index++) {  // todo: 此处是不是应该用临时的最优解，而不是当前最优解（因为现在还没有把蚁群优化得到的最新的最优解幅值给Ant.best_so_far_Ant）
             lastPos = Controller.getLastCommitedPos(index);
             lastCommitedIndexes.add(lastPos);
         }
@@ -758,8 +754,8 @@ public class VRPTW_ACS implements Runnable {
                 System.out.println("Inside relocateMultipleRouteIterated; count=" + count);
             }
 
-            Ants.copy_from_to(improvedAnt, a, instance);
-            Ants.copy_from_to(improvedAnt, temp, instance);
+            Ants.copy_from_to(bestImprovedAnt, tmp_best_so_far_ant, instance);
+            Ants.copy_from_to(bestImprovedAnt, temp, instance);
 
             for (int indexTourSource = 0; indexTourSource < temp.usedVehicles; indexTourSource++) {
                 for (int indexTourDestination = 0; indexTourDestination < temp.usedVehicles; indexTourDestination++) {
@@ -779,7 +775,7 @@ public class VRPTW_ACS implements Runnable {
                         }
                         for (int i = startIndexSource; i < temp.tours.get(indexTourSource).size() - 1; i++) {
                             for (int j = startIndexDestination; j < temp.tours.get(indexTourDestination).size(); j++) {
-                                //check if results a feasible solution (i.e. no time window constraint is violated)
+                                //check if results tmp_best_so_far_ant feasible solution (i.e. no time window constraint is violated)
                                 feasible = checkFeasibleTourRelocationMultiple(temp, instance, indexTourSource, indexTourDestination, i, j);
                                 if (feasible) {
                                     //obtain the neighbour solution corresponding to the relocation operator
@@ -832,16 +828,17 @@ public class VRPTW_ACS implements Runnable {
                                     //comparison of the 2 double values to consider only the first 10 most significant decimals
                                     //将这两个数四舍五入到10位小数，以便比较2个双精度数值，只考虑前10位最高位小数
                                     round1 = Math.round(temp.total_tour_length * tempNo) / tempNo;
-                                    round2 = Math.round(improvedAnt.total_tour_length * tempNo) / tempNo;
+                                    round2 = Math.round(bestImprovedAnt.total_tour_length * tempNo) / tempNo;
+
                                     //if some improvement is obtained in the total traveled distance如果总行驶距离有所改善
-                                    if (((round1 < round2) && (temp.usedVehicles == improvedAnt.usedVehicles))
-                                            || (temp.usedVehicles < improvedAnt.usedVehicles)) {
-                                        Ants.copy_from_to(temp, improvedAnt, instance);
+                                    if (((round1 < round2) && (temp.usedVehicles == bestImprovedAnt.usedVehicles)) || (temp.usedVehicles < bestImprovedAnt.usedVehicles)) {
+                                        Ants.copy_from_to(temp, bestImprovedAnt, instance);
                                         foundImprovement = true;
                                     }
 
-                                    //restore previous solution constructed by ant恢复先前由ant构造的解决方案
-                                    Ants.copy_from_to(a, temp, instance);
+
+                                    //restore previous solution constructed by ant恢复先前由ant构造的解决方
+                                    Ants.copy_from_to(tmp_best_so_far_ant, temp, instance);
                                 }
 
                             }
@@ -853,7 +850,17 @@ public class VRPTW_ACS implements Runnable {
             }
         }
 
-        return improvedAnt;
+
+        // 打印一下局部搜索前后的total_tour_length和cost_objects之间的值。
+        if (tmp_best_so_far_ant.total_tour_length != bestImprovedAnt.total_tour_length) {
+            System.out.println("局部搜索（重定位算子）前的信息：\n" + "\ttotal_tour_len: " + tmp_best_so_far_ant.total_tour_length + "\tcost_objects: " + Arrays.toString(tmp_best_so_far_ant.costObjectives) + "\n");
+            System.out.println("局部搜索（重定位算子）后的信息：\n" + "\ttotal_tour_len: " + bestImprovedAnt.total_tour_length + "\tcost_objects: " + Arrays.toString(bestImprovedAnt.costObjectives) + "\n");
+        }
+        // todo: 发现局部搜索算子内部，只对最常路径进行了更新，单手缺失对cost_objects的更新，导致应用局部搜索算子之后，total_tour_length和cost_objects[0]之间不相等。
+        bestImprovedAnt.costObjectives[0] = bestImprovedAnt.total_tour_length;
+        bestImprovedAnt.costObjectives[1] = Ants.computeToursAmplitude(bestImprovedAnt);
+
+        return bestImprovedAnt;
     }
 
     //skip committed (defined) nodes
@@ -983,8 +990,7 @@ public class VRPTW_ACS implements Runnable {
                                 }
 
                                 //if some improvement is obtained in the total traveled distance
-                                if (((temp.total_tour_length < improvedAnt.total_tour_length) && (temp.usedVehicles == improvedAnt.usedVehicles))
-                                        || (temp.usedVehicles < improvedAnt.usedVehicles)) {
+                                if (((temp.total_tour_length < improvedAnt.total_tour_length) && (temp.usedVehicles == improvedAnt.usedVehicles)) || (temp.usedVehicles < improvedAnt.usedVehicles)) {
                                     Ants.copy_from_to(temp, improvedAnt, instance);
                                     foundImprovement = true;
                                 }
@@ -1113,7 +1119,7 @@ public class VRPTW_ACS implements Runnable {
 
     }
 
-    static Ant exchangeMultipleRoute(Ant a, VRPTW instance) {
+    static Ant exchangeMultipleRoute(Ant tmp_best_so_far_ant, VRPTW instance) {
         boolean feasible = false;
         int city1, city2, sourcePrevCity, sourceNextCity = -2, destinationPrevCity, destinationNextCity;
         int startIndexSource, startIndexDestination;
@@ -1163,8 +1169,8 @@ public class VRPTW_ACS implements Runnable {
         temp.earliestTime = new ArrayList(temp.usedVehicles);
         temp.latestTime = new ArrayList(temp.usedVehicles);
 
-        Ants.copy_from_to(a, bestImprovedAnt, instance);
-        Ants.copy_from_to(a, temp, instance);
+        Ants.copy_from_to(tmp_best_so_far_ant, bestImprovedAnt, instance);
+        Ants.copy_from_to(tmp_best_so_far_ant, temp, instance);
 
         ArrayList<Integer> lastCommitedIndexes = new ArrayList<Integer>();
         for (int index = 0; index < Ants.best_so_far_ant.usedVehicles; index++) {
@@ -1172,8 +1178,8 @@ public class VRPTW_ACS implements Runnable {
             lastCommitedIndexes.add(lastPos);
         }
 
-        for (int indexTourSource = 0; indexTourSource < (a.usedVehicles - 1); indexTourSource++) {
-            for (int indexTourDestination = indexTourSource + 1; indexTourDestination < a.usedVehicles; indexTourDestination++) {
+        for (int indexTourSource = 0; indexTourSource < (tmp_best_so_far_ant.usedVehicles - 1); indexTourSource++) {
+            for (int indexTourDestination = indexTourSource + 1; indexTourDestination < tmp_best_so_far_ant.usedVehicles; indexTourDestination++) {
                 if (indexTourSource != indexTourDestination) {
                     //index of the element to be moved from the source tour
                     if (indexTourSource > lastCommitedIndexes.size() - 1) {
@@ -1188,8 +1194,8 @@ public class VRPTW_ACS implements Runnable {
                     } else {
                         startIndexDestination = lastCommitedIndexes.get(indexTourDestination) + 1;
                     }
-                    for (int i = startIndexSource; i < a.tours.get(indexTourSource).size() - 1; i++) {
-                        for (int j = startIndexDestination; j < a.tours.get(indexTourDestination).size() - 1; j++) {
+                    for (int i = startIndexSource; i < tmp_best_so_far_ant.tours.get(indexTourSource).size() - 1; i++) {
+                        for (int j = startIndexDestination; j < tmp_best_so_far_ant.tours.get(indexTourDestination).size() - 1; j++) {
                             if (indexTourSource <= indexTourDestination) {
                                 //check if results a feasible solution (i.e. no time window constraint is violated)
                                 feasible = checkFeasibleTourExchangeMultiple(temp, instance, indexTourSource, indexTourDestination, i, j);
@@ -1227,9 +1233,8 @@ public class VRPTW_ACS implements Runnable {
                                     if (temp.total_tour_length < bestImprovedAnt.total_tour_length) {
                                         Ants.copy_from_to(temp, bestImprovedAnt, instance);
                                     }
-
                                     //restore previous solution constructed by ant
-                                    Ants.copy_from_to(a, temp, instance);
+                                    Ants.copy_from_to(tmp_best_so_far_ant, temp, instance);
                                 }
                             }
 
@@ -1243,7 +1248,7 @@ public class VRPTW_ACS implements Runnable {
         return bestImprovedAnt;
     }
 
-    static Ant exchangeMultipleRouteIterated(Ant a, VRPTW instance) {
+    static Ant exchangeMultipleRouteIterated(Ant tmp_best_so_far_ant, VRPTW instance) {
         boolean feasible = false;
         int city1, city2, sourcePrevCity, sourceNextCity = -2, destinationPrevCity, destinationNextCity;
         int startIndexSource, startIndexDestination;
@@ -1296,8 +1301,8 @@ public class VRPTW_ACS implements Runnable {
         temp.earliestTime = new ArrayList(temp.usedVehicles);
         temp.latestTime = new ArrayList(temp.usedVehicles);
 
-        Ants.copy_from_to(a, improvedAnt, instance);
-        Ants.copy_from_to(a, temp, instance);
+        Ants.copy_from_to(tmp_best_so_far_ant, improvedAnt, instance);
+        Ants.copy_from_to(tmp_best_so_far_ant, temp, instance);
 
         ArrayList<Integer> lastCommitedIndexes = new ArrayList<Integer>();
         for (int index = 0; index < Ants.best_so_far_ant.usedVehicles; index++) {
@@ -1314,7 +1319,7 @@ public class VRPTW_ACS implements Runnable {
                 System.out.println("Inside exchangeMultipleRouteIterated; count=" + count);
             }
 
-            Ants.copy_from_to(improvedAnt, a, instance);
+            Ants.copy_from_to(improvedAnt, tmp_best_so_far_ant, instance);
             Ants.copy_from_to(improvedAnt, temp, instance);
 
             for (int indexTourSource = 0; indexTourSource < (temp.usedVehicles - 1); indexTourSource++) {
@@ -1336,7 +1341,7 @@ public class VRPTW_ACS implements Runnable {
                         for (int i = startIndexSource; i < temp.tours.get(indexTourSource).size() - 1; i++) {
                             for (int j = startIndexDestination; j < temp.tours.get(indexTourDestination).size() - 1; j++) {
                                 if (indexTourSource <= indexTourDestination) {
-                                    //check if results a feasible solution (i.e. no time window constraint is violated)
+                                    //check if results tmp_best_so_far_ant feasible solution (i.e. no time window constraint is violated)
                                     feasible = checkFeasibleTourExchangeMultiple(temp, instance, indexTourSource, indexTourDestination, i, j);
                                     if (feasible) {
                                         //obtain the neighbour solution corresponding to the relocation operator
@@ -1384,7 +1389,7 @@ public class VRPTW_ACS implements Runnable {
                                         }
 
                                         //restore previous solution constructed by ant
-                                        Ants.copy_from_to(a, temp, instance);
+                                        Ants.copy_from_to(tmp_best_so_far_ant, temp, instance);
                                     }
                                 }
 
@@ -1395,6 +1400,15 @@ public class VRPTW_ACS implements Runnable {
                 }
             }
         }
+        // 打印一下局部搜索前后的total_tour_length和cost_objects之间的值。
+        if (tmp_best_so_far_ant.total_tour_length != improvedAnt.total_tour_length) {
+            System.out.println("局部搜索（交换算子）前的信息：\n" + "\ttotal_tour_len: " + tmp_best_so_far_ant.total_tour_length + "\tcost_objects: " + Arrays.toString(tmp_best_so_far_ant.costObjectives) + "\n");
+            System.out.println("局部搜索（交换算子）后的信息：\n" + "\ttotal_tour_len: " + improvedAnt.total_tour_length + "\tcost_objects: " + Arrays.toString(improvedAnt.costObjectives) + "\n");
+        }
+
+        // todo: 发现局部搜索算子内部，只对最常路径进行了更新，单手缺失对cost_objects的更新，导致应用局部搜索算子之后，total_tour_length和cost_objects[0]之间不相等。
+        improvedAnt.costObjectives[0] = improvedAnt.total_tour_length;
+        improvedAnt.costObjectives[1] = Ants.computeToursAmplitude(improvedAnt);
 
         return improvedAnt;
     }
@@ -1417,8 +1431,8 @@ public class VRPTW_ACS implements Runnable {
         //System.out.println("Entering update_statistics");
 
         // 保存当前蚂蚁迭代的相关结果信息
-        String path = "./output_count_solutions/300次蚂蚁迭代解_未使用两个算子/时间片_"+Controller.currentTimeSlice+"_300次蚂蚁迭代解_未使用两个算子.txt";
-        write300AntIterationSolution(path, counter);
+        String path = "./output_count_solutions/300次蚂蚁迭代解_未使用两个算子/时间片_" + Controller.currentTimeSlice + "_300次蚂蚁迭代解_未使用两个算子.txt";
+        write300AntIterationSolution(a, path, counter);
 
         boolean isValid;
         if (ls_flag) {
@@ -1444,8 +1458,7 @@ public class VRPTW_ACS implements Runnable {
         synchronized (obj) {
             round1 = Math.round(a.total_tour_length * tempNo) / tempNo;
             round2 = Math.round(Ants.best_so_far_ant.total_tour_length * tempNo) / tempNo;
-            if ((a.usedVehicles < Ants.best_so_far_ant.usedVehicles) || ((a.usedVehicles == Ants.best_so_far_ant.usedVehicles) && (round1 < round2))
-                    || ((round1 < round2) && (Ants.best_so_far_ant.total_tour_length == Double.MAX_VALUE))) {
+            if ((a.usedVehicles < Ants.best_so_far_ant.usedVehicles) || ((a.usedVehicles == Ants.best_so_far_ant.usedVehicles) && (round1 < round2)) || ((round1 < round2) && (Ants.best_so_far_ant.total_tour_length == Double.MAX_VALUE))) {
 
                 InOut.time_used = Timer.elapsed_time();  //best solution found after time_used
 			    /*if (a.usedVehicles < Ants.best_so_far_ant.usedVehicles) {
@@ -1536,8 +1549,7 @@ public class VRPTW_ACS implements Runnable {
 			a.indexLongestTour = idLongestTour;
 		}*/
 
-        if ((a.usedVehicles < Ants.best_so_far_ant.usedVehicles) || (a.usedVehicles == Ants.best_so_far_ant.usedVehicles) && (a.total_tour_length < Ants.best_so_far_ant.total_tour_length)
-                || ((a.total_tour_length < Ants.best_so_far_ant.total_tour_length) && (Ants.best_so_far_ant.total_tour_length == Double.MAX_VALUE))) {
+        if ((a.usedVehicles < Ants.best_so_far_ant.usedVehicles) || (a.usedVehicles == Ants.best_so_far_ant.usedVehicles) && (a.total_tour_length < Ants.best_so_far_ant.total_tour_length) || ((a.total_tour_length < Ants.best_so_far_ant.total_tour_length) && (Ants.best_so_far_ant.total_tour_length == Double.MAX_VALUE))) {
 
             InOut.time_used = Timer.elapsed_time();  //best solution found after time_used
             Ants.copy_from_to(a, Ants.best_so_far_ant, instance);
@@ -1551,8 +1563,7 @@ public class VRPTW_ACS implements Runnable {
             //System.out.println("Iter: " + InOut.iteration + " Best ant >> No. of used vehicles=" + Ants.best_so_far_ant.usedVehicles + " total tours length=" + Ants.best_so_far_ant.total_tour_length);
         }
 
-        if ((a.usedVehicles < Ants.restart_best_ant.usedVehicles) || (a.usedVehicles == Ants.restart_best_ant.usedVehicles) && (a.total_tour_length < Ants.restart_best_ant.total_tour_length)
-                || ((a.total_tour_length < Ants.restart_best_ant.total_tour_length) && (Ants.restart_best_ant.total_tour_length == Double.MAX_VALUE))) {
+        if ((a.usedVehicles < Ants.restart_best_ant.usedVehicles) || (a.usedVehicles == Ants.restart_best_ant.usedVehicles) && (a.total_tour_length < Ants.restart_best_ant.total_tour_length) || ((a.total_tour_length < Ants.restart_best_ant.total_tour_length) && (Ants.restart_best_ant.total_tour_length == Double.MAX_VALUE))) {
             Ants.copy_from_to(a, Ants.restart_best_ant, instance);
 
             InOut.restart_found_best = InOut.iteration;
@@ -1673,10 +1684,8 @@ public class VRPTW_ACS implements Runnable {
         }
 
         /* Next, apply the Ants.pheromone deposit for the various ACO algorithms */
-        if (Ants.as_flag)
-            as_update();
-        else if (Ants.acs_flag)
-            acs_global_update();
+        if (Ants.as_flag) as_update();
+        else if (Ants.acs_flag) acs_global_update();
 
 
         /*
@@ -1718,14 +1727,14 @@ public class VRPTW_ACS implements Runnable {
 			}	*/
             update_statistics(vrpInstance, counter);
             pheromone_trail_update();
-            search_control_and_statistics();
+//            search_control_and_statistics();  // 这个作者本身就注释掉了，是一个空方法。
 
             // 保存当前蚂蚁迭代的相关结果信息
-            String path = "./output_count_solutions/300次蚂蚁迭代解/时间片_"+Controller.currentTimeSlice+"_300次蚂蚁迭代解.txt";
-            write300AntIterationSolution(path, counter);
+            String path = "./output_count_solutions/300次蚂蚁迭代解/时间片_" + Controller.currentTimeSlice + "_300次蚂蚁迭代解.txt";
+            write300AntIterationSolution(Ants.best_so_far_ant, path, counter);
 
             //force the ant colony thread to stop its execution
-            if (counter > 300) {
+            if (counter > 50) {  // todo: 修改蚂蚁最大迭代次数
                 isRunning = false;
             }
 

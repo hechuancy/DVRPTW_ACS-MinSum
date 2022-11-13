@@ -252,6 +252,7 @@ public class InOut {
 	    totalCost = length;
 	    longestSubtour = Ants.best_so_far_ant.longest_tour_length;
 	    amplitude = Ants.best_so_far_ant.costObjectives[1];
+
 	    //System.out.println("Cities to be visited: " + Ants.best_so_far_ant.toVisit);
 	    /*System.out.print("Visited cities: ");
 	    for (int i = 0; i < VRPTW.n; i++) {
@@ -264,7 +265,7 @@ public class InOut {
 		Utilities.setNrCities(nrCities);
 		Utilities.setSubtoursCost(subtoursCost);*/
 		
-		Utilities.setTotalCost(totalCost);
+		Utilities.setTotalCost(totalCost);  // 传入当前最有蚂蚁的最长度
 		Utilities.setLongestSubtour(longestSubtour);
 		Utilities.setAmplitude(amplitude);
 		

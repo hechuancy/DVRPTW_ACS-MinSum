@@ -14,17 +14,17 @@ import static aco.ParetoFront.bestSoFarPareto;
 public class Controller {
 
 	//length of a working day in seconds
-	private static int workingDay = 40;
+	private static int workingDay = 100;
 	
 	//number of time slices
-	private static int noTimeSlices = 4;
+	private static int noTimeSlices = 10;
 	
 	//file name to be used for input data set
 //	public static String vrpInstance = "c101-0.0.txt";   //r104
-	public static String vrpInstance = "c101";   //r104
+	public static String vrpInstance = "c102";   //r104
 
 	//dynamic level, which gives the proportion of the dynamic requests (available time > 0) from the DVRPTW instance
-	private static double dynamicLevel = 0.4;  //0.0  //0.1  //0.5  //1.0
+	private static double dynamicLevel = 0.3;  //0.0  //0.1  //0.5  //1.0
 	
 	private static double scalingValue;
 	

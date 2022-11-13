@@ -1188,7 +1188,8 @@ public class Ants {
 			a2.beginService[i] = a1.beginService[i];
 		}
     }
-    
+
+	// 找出所有车辆路径中，最短得车辆路径和最长的车辆路径（车辆可以不一致），返回两者之差。
     static double computeToursAmplitude(Ant a) {
     	double min, max;
 		int i;

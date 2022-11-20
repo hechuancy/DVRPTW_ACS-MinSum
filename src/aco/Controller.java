@@ -19,15 +19,15 @@ public class Controller {
     private static int workingDay = 100;
 
     //number of time slices
-    private static int noTimeSlices = 4;
+    private static int noTimeSlices = 50;
 
     public static int currentTimeSlice = 1;
     //file name to be used for input data set
 //	public static String vrpInstance = "c101-0.0.txt";   //r104
-    public static String vrpInstance = "c102";   //r104
+    public static String vrpInstance = "c102d";   //r104
 
     //dynamic level, which gives the proportion of the dynamic requests (available time > 0) from the DVRPTW instance
-    private static double dynamicLevel = 0.1;  //0.0  //0.1  //0.5  //1.0
+    private static double dynamicLevel = 0.3;  //0.0  //0.1  //0.5  //1.0
 
     private static double scalingValue;
 
@@ -224,7 +224,7 @@ public class Controller {
 
         clearOutputFiles();  // 删除几个输出文件夹
 
-        for (int trial = 0; trial <5; trial++) {
+        for (int trial = 0; trial < 5; trial++) {
             //reads benchmark data; read the data from the input file
             String dvrptwInstance = vrpInstance + "-" + dynamicLevel;
             String fileName = dvrptwInstance + ".txt";
@@ -403,14 +403,15 @@ public class Controller {
                             Ants.best_so_far_ant.tours.add(indexTour, new ArrayList<Integer>());
                             Ants.best_so_far_ant.tours.get(indexTour).add(-1);
                             Ants.best_so_far_ant.tour_lengths.add(indexTour, 0.0);
-                            Ants.best_so_far_ant.currentQuantity.add(indexTour, 0.0);
+//                            Ants.best_so_far_ant.currentQuantity.add(indexTour, 0.0);
+                            Ants.best_so_far_ant.currentQuantityArray.add(indexTour, new double[]{0.0, 0.0});
                             Ants.best_so_far_ant.currentTime.add(indexTour, 0.0);
                             //Ants.lastCommitted.add(indexTour, 0);
-
                             //try to add as many unvisited cities/nodes as possible in this newly created tour
                             //following the nearest neighbour heuristic 尝试在这个新创建的旅程中，按照最近的邻居启发法添加尽可能多的未访问的城市/节点
                             Ants.choose_closest_nn(Ants.best_so_far_ant, indexTour, vrpInstance); // 把插不进去的节点通过最近邻启发式插入到当前解中
                             //System.out.println("After adding new tour & NN tour construction: Cities to be visited in the best so far solution: " + Ants.best_so_far_ant.toVisit);
+
 
                             //try to insert remaining cities using insertion heuristic 尝试使用插入启发式方法插入剩余城市
                             if (Ants.best_so_far_ant.toVisit > 0) {
@@ -457,7 +458,7 @@ public class Controller {
 						System.out.println();
 				  }*/
                     }
-                   System.out.println("蚁群优化前的当前最优解：" + Ants.best_so_far_ant);
+                    System.out.println("蚁群优化前的当前最优解：" + Ants.best_so_far_ant);
 //                    System.out.println("蚁群优化前的CommitNodes: " + Arrays.toString(Ants.committedNodes));
 
                     currentTimeSlice++;

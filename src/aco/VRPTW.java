@@ -62,8 +62,9 @@ public class VRPTW {
 	private int nrVehicles;
 	
 	//the capacity of each vehicle
-	private int capacity;
-	
+//	private int capacity;
+	private double[] capacityArray;
+
 	//arraylist which keeps all the customer requests defined in the VRPTW instance
 	private ArrayList<Request> requests;
 	
@@ -100,13 +101,14 @@ public class VRPTW {
     
     public VRPTW() {}
 	
-	public VRPTW(int nrVehicles_, int capacity_) {
+	public VRPTW(int nrVehicles_, double[] capacityArray_) {
 		this.nrVehicles = nrVehicles_;
-		this.capacity = capacity_;
+//		this.capacity = capacity_;
+		this.capacityArray = capacityArray_;
 	}
 	
-	public VRPTW(int nrVehicles_, int capacity_, ArrayList<Request> list) {
-		this(nrVehicles_, capacity_);
+	public VRPTW(int nrVehicles_, double[] capacityArray_, ArrayList<Request> list) {
+		this(nrVehicles_, capacityArray_);
 		
 		this.requests = new ArrayList<Request>(list.size());
 		for (int i = 0; i < list.size(); i++) {
@@ -122,12 +124,21 @@ public class VRPTW {
 		this.nrVehicles = nrVehicles;
 	}
 
-	public int getCapacity() {
-		return capacity;
+//	public int getCapacity() {
+//		return capacity;
+//	}
+
+	public double[] getCapacityArray() {
+		return capacityArray;
 	}
 
-	public void setCapacity(int capacity) {
-		this.capacity = capacity;
+//	public void setCapacity(int capacity) {
+//		this.capacity = capacity;
+//	}
+
+
+	public void setCapacityArray(double[] capacityArray) {
+		this.capacityArray = capacityArray;
 	}
 
 	public ArrayList<Request> getRequests() {

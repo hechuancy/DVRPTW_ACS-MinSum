@@ -14,7 +14,7 @@ public class Request implements Comparable<Request> {
     private int yCoord;
 	
     /** demand (delivery quantity) of the request */
-    private int demand;
+	private double[] demandArray;
     
     /** ready time of the request; earliest arrival time/lower limit/beginning of the time window */
     private double startWindow;
@@ -36,11 +36,11 @@ public class Request implements Comparable<Request> {
     
     public Request() {}
     
-    public Request (int id_, int xCoord_, int yCoord_, int demand_, int startWindow_, int endWindow_, int serviceTime_, int availableTime_) {
+    public Request (int id_, int xCoord_, int yCoord_, double demand_01, double demand_02, int startWindow_, int endWindow_, int serviceTime_, int availableTime_) {
     	this.id = id_;
     	this.xCoord = xCoord_;
     	this.yCoord = yCoord_;
-    	this.demand = demand_;
+		this.demandArray = new double[]{demand_01, demand_02};
     	this.startWindow = startWindow_;
     	this.endWindow = endWindow_;
     	this.serviceTime = serviceTime_;
@@ -71,12 +71,14 @@ public class Request implements Comparable<Request> {
 		this.yCoord = yCoord;
 	}
 
-	public int getDemand() {
-		return demand;
+
+	public double[] getDemandArray() {
+		return demandArray;
 	}
 
-	public void setDemand(int demand) {
-		this.demand = demand;
+
+	public void setDemandArray(double[] demandArray) {
+		this.demandArray = demandArray;
 	}
 
 	public double getStartWindow() {

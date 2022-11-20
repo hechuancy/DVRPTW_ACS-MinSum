@@ -36,16 +36,18 @@ public class ParetoFront {
 		//otherwise a1 == a2
 		return 0;
 	}*/
-	
+
+	// 判断两个解是否相互支配
 	public static byte solutionDominates(Ant solution1, Ant solution2) {
 		boolean first = true;
 		int l = 0;
 		int nObjectives = 2;
-		
+
+
 		while (l < nObjectives && solution1.costObjectives[l] == solution2.costObjectives[l])
 			l++;
 		if (l == nObjectives)
-			return -2;
+			return -2;  // 两个解相等
 			
 		if (solution1.costObjectives[l] > solution2.costObjectives[l]) {
 			first = false;
@@ -54,7 +56,7 @@ public class ParetoFront {
 		boolean dominates = true; //first dominates the second
 		int obj = 1;
 		
-		if (first) {
+		if (first) {  // 如果弟1个好
 			while (dominates && obj < nObjectives && solution1.costObjectives[obj] <= solution2.costObjectives[obj])
 				obj++;
 		}
@@ -83,14 +85,14 @@ public class ParetoFront {
 			 * by this one. And, if there is one solution in the pareto that dominates this solution, 
 			 * then this solution can't dominate any solution in the pareto.
 	        */
-			if (solutionDominates(iterPareto.get(i), a) < 0) {
+			if (solutionDominates(iterPareto.get(i), a) < 0) { // -2是相等解，-1是第一个解支配第2个，1是第2个解支配第1个解
 				dominated = true;
 	        }
 			
 			/* If this solution dominates one solution in the pareto, then there is not any solution 
 			 * in the pareto that dominates this one.
 		    */
-			else if (solutionDominates(a, iterPareto.get(i)) == -1) {
+			else if (solutionDominates(a, iterPareto.get(i)) == -1) {  // a支配帕累托集合中的某个解
 				//remove the dominated one
 				iterPareto.remove(i);
 				
@@ -98,7 +100,7 @@ public class ParetoFront {
 				while (i < iterPareto.size()) {
 	                if (solutionDominates(a, iterPareto.get(i)) == -1) {
 	                	//remove the dominated one
-	                	iterPareto.remove(i);
+	                	iterPareto.remove(i);  // 因为移除掉了i位置的元素，所以下次访问i时，已经变成了下一个元素了，相当于i++。
 	                }
 	                else { i++; }
 	            }
@@ -143,7 +145,7 @@ public class ParetoFront {
 	        	else if (solutionDominates(solution, bestSoFarPareto.get(j)) == -1) {
 	        		//remove the dominated one
 	        		bestSoFarPareto.remove(j);
-	        		
+
 	        		//check for other dominated solutions in the Pareto
 		        	while (j < bestSoFarPareto.size()) {
 		        		if (solutionDominates(solution, bestSoFarPareto.get(j)) == -1) {

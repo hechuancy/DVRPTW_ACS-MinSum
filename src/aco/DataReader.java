@@ -117,7 +117,9 @@ public class DataReader {
         }
 
         vrpInstance.setNoVehicles(values[0]);
-        vrpInstance.setCapacity(values[1]);
+//        vrpInstance.setCapacity(values[1]);
+        double[] tmp_arr = {values[1], values[1]};
+        vrpInstance.setCapacityArray(tmp_arr);
     }
 
 
@@ -129,7 +131,8 @@ public class DataReader {
      */
     private void readRequestRecord(String line, ArrayList<Request> reqList, ArrayList<Request> dynamicReqList, ArrayList<Integer> availableNodes) {
         String[] strRecord = line.trim().split("\\s+");
-        int[] values = new int[8];
+//        int[] values = new int[8];
+        int[] values = new int[9];
         int idCity;
 
         for (int i = 0; i < strRecord.length; i++) {
@@ -143,10 +146,11 @@ public class DataReader {
         }
 
 
-        Request req = new Request(values[0], values[1], values[2], values[3], values[4], values[5], values[6], values[7]);
+        Request req = new Request(values[0], values[1], values[2], values[3], values[4], values[5], values[6], values[7], values[8]);
         reqList.add(req);
         //we have a dynamic customer request
-        if (values[7] > 0) {
+//        if (values[7] > 0) {
+        if (values[8] > 0) {
             dynamicReqList.add(req);
         }
         //keep separately the IDs of apriori requests/nodes which are available from the beginning, as part of DVRPTW instance

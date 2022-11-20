@@ -1069,12 +1069,14 @@ public class Utilities {
 	public static boolean checkFeasibility(Ant a, VRPTW vrp, boolean printNoNodes) {
 		boolean isFeasible = true;
 		int currentCity, prevCity, addedNodes = 0;
-		double currentQuantity, currentTime;
+		double currentTime;
+		double[] currentQuantityArr;
 		double distance, arrivalTime, beginService;
 		ArrayList<Request> reqList = vrp.getRequests();
 		
 		for (int indexTour = 0; indexTour < a.usedVehicles; indexTour++) {
-			currentQuantity = reqList.get(0).getDemand();
+//			currentQuantity = reqList.get(0).getDemand();
+			currentQuantityArr = reqList.get(0).getDemandArray();
 			currentTime = 0.0;
 			for (int currentPos = 1; currentPos < a.tours.get(indexTour).size(); currentPos++) {
 				if (currentPos < a.tours.get(indexTour).size() - 1) {
@@ -1085,8 +1087,8 @@ public class Utilities {
 				}*/
 				prevCity = a.tours.get(indexTour).get(currentPos - 1);
 				currentCity = a.tours.get(indexTour).get(currentPos);
-				currentQuantity += reqList.get(currentCity + 1).getDemand();
-				
+//				currentQuantity += reqList.get(currentCity + 1).getDemand();
+				currentQuantityArr = InOut.addDoubleArray(currentQuantityArr,reqList.get(currentCity + 1).getDemandArray());
 				distance = VRPTW.instance.distance[prevCity + 1][currentCity + 1];
 		    	arrivalTime = currentTime + reqList.get(prevCity + 1).getServiceTime() + distance; 
 		    	beginService = Math.max(arrivalTime, reqList.get(currentCity + 1).getStartWindow());
@@ -1098,11 +1100,18 @@ public class Utilities {
 		    	currentTime = beginService;	
 				
 			}
-			if (currentQuantity > vrp.getCapacity()) {
+//			if (currentQuantity > vrp.getCapacity()) {
+//				//isFeasible = false;
+//				System.out.println("Capacity constraint violated");
+//				return false;
+//			}
+
+			if (!InOut.compareArrayALessEqualArrayB(currentQuantityArr, vrp.getCapacityArray())) {
 				//isFeasible = false;
 				System.out.println("Capacity constraint violated");
 				return false;
 			}
+
 		}
 		if (printNoNodes) {
 			System.out.println("Added nodes=" + addedNodes);

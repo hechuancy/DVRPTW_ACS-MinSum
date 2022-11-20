@@ -1,16 +1,12 @@
 package aco;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 import aco.Ants.Ant;
 
-import java.lang.management.*;
-
+import static aco.InOut.*;
 import static aco.Utilities.write300AntIterationSolution;
-
 
 /**
  * ACO algorithms for the TSP
@@ -113,20 +109,25 @@ public class VRPTW_ACS implements Runnable {
 
     static boolean isFeasible(VRPTW vrp, Ant a, int city, double beginService, double beginServiceDepot, int indexSalesman) {
         boolean ok = false;
-        double currentQuantity;
+//        double currentQuantity;
+        double[] currentQuantityArray;
         ArrayList<Request> reqList = vrp.getRequests();
 
         //check upper bound of the time window of the next customer to be visited &&
         //current capacity of the car && vehicle arrival time at the depot (the maximum total route time -> upper bound of the time window of the depot)
-        currentQuantity = a.currentQuantity.get(indexSalesman) + reqList.get(city + 1).getDemand();
-        if (beginService <= reqList.get(city + 1).getEndWindow() && currentQuantity <= vrp.getCapacity() && beginServiceDepot <= reqList.get(0).getEndWindow()) {
+//        currentQuantity = a.currentQuantity.get(indexSalesman) + reqList.get(city + 1).getDemand();
+        currentQuantityArray = InOut.addDoubleArray(a.currentQuantityArray.get(indexSalesman), reqList.get(city + 1).getDemandArray());
+
+//        if (beginService <= reqList.get(city + 1).getEndWindow() && currentQuantity <= vrp.getCapacity() && beginServiceDepot <= reqList.get(0).getEndWindow()) {
+        if (beginService <= reqList.get(city + 1).getEndWindow() && compareArrayALessEqualArrayB(currentQuantityArray, vrp.getCapacityArray()) && beginServiceDepot <= reqList.get(0).getEndWindow()) {
             ok = true;
         }
         if (ok == false) {
             if (beginService > reqList.get(city + 1).getEndWindow()) {
                 //System.out.println("City " + city + ": End time window constraint violated");
             }
-            if (currentQuantity > vrp.getCapacity()) {
+//            if (currentQuantity > vrp.getCapacity()) {
+            if (!compareArrayALessEqualArrayB(currentQuantityArray, vrp.getCapacityArray())) {
                 //System.out.println("City " + city + ": Vehicle capacity constraint violated");
             }
             if (beginServiceDepot > reqList.get(0).getEndWindow()) {
@@ -193,7 +194,8 @@ public class VRPTW_ACS implements Runnable {
                         a.tours.add(l, new ArrayList<Integer>());
                         a.tours.get(l).add(-1);
                         a.tour_lengths.add(l, 0.0);
-                        a.currentQuantity.add(l, 0.0);
+//                        a.currentQuantity.add(l, 0.0);
+                        a.currentQuantityArray.add(l, new double[]{0.0,0.0});
                         a.currentTime.add(l, 0.0);
                     }
                     startIndex = i + 1;
@@ -218,7 +220,9 @@ public class VRPTW_ACS implements Runnable {
                     a.toVisit--;
                     a.currentTime.set(i, beginService);
                     a.beginService[city + 1] = beginService;
-                    a.currentQuantity.set(i, a.currentQuantity.get(i) + reqList.get(city + 1).getDemand());
+//                    a.currentQuantity.set(i, a.currentQuantity.get(i) + reqList.get(city + 1).getDemand());
+                    double[] tmp = addDoubleArray(a.currentQuantityArray.get(i), reqList.get(city + 1).getDemandArray());
+                    a.currentQuantityArray.set(i, tmp);
 
                     current_city = city + 1;
                 }
@@ -396,13 +400,17 @@ public class VRPTW_ACS implements Runnable {
     static boolean checkFeasibleTourRelocationMultiple(Ant a, VRPTW vrp, int indexTourSource, int indexTourDestination, int i, int j) {
         boolean isFeasible = true;
         int city, previousCity, prevCity, nextCity, currentCity;
-        double currentQuantity, arrivalTime, currentTime = 0.0, beginService, earliestTime, latestTime, distance;
+        double arrivalTime, currentTime = 0.0, beginService, earliestTime, latestTime, distance;
+        double currentQuantity;
+        double[] currentQuantityArray;
         ArrayList<Request> reqList = vrp.getRequests();
         double value1, value2, value3, value4;
 
         city = a.tours.get(indexTourSource).get(i);
-        currentQuantity = a.currentQuantity.get(indexTourDestination) + reqList.get(city + 1).getDemand();
-        if (currentQuantity > vrp.getCapacity()) {
+//        currentQuantity = a.currentQuantity.get(indexTourDestination) + reqList.get(city + 1).getDemand();
+        currentQuantityArray = addDoubleArray(a.currentQuantityArray.get(indexTourDestination),reqList.get(city + 1).getDemandArray());
+//        if (currentQuantity > vrp.getCapacity()) {
+        if (!compareArrayALessEqualArrayB(currentQuantityArray, vrp.getCapacityArray())) {
             return false;
         }
 
@@ -531,7 +539,11 @@ public class VRPTW_ACS implements Runnable {
         boolean feasible = false;
         int city, sourcePrevCity, sourceNextCity = -2, destinationPrevCity, destinationNextCity;
         int startIndexSource, startIndexDestination;
-        double newQuantity1, newQuantity2, newDistance1, newDistance2, newTotalDistance;
+//        double newQuantity1, newQuantity2, newDistance1, newDistance2, newTotalDistance;
+
+        double[] newQuantityArray1,newQuantityArray2;
+        double newDistance1, newDistance2, newTotalDistance;
+
         ArrayList<Request> reqList = instance.getRequests();
         int lastPos;
 
@@ -540,7 +552,8 @@ public class VRPTW_ACS implements Runnable {
         bestImprovedAnt.tour_lengths = new ArrayList<Double>();
         bestImprovedAnt.beginService = new double[VRPTW.n + 1];
         bestImprovedAnt.currentTime = new ArrayList<Double>();
-        bestImprovedAnt.currentQuantity = new ArrayList<Double>();
+//        bestImprovedAnt.currentQuantity = new ArrayList<Double>();
+        bestImprovedAnt.currentQuantityArray = new ArrayList<double[]>();
         bestImprovedAnt.usedVehicles = 1;
         for (int j = 0; j < bestImprovedAnt.usedVehicles; j++) {
             bestImprovedAnt.tours.add(j, new ArrayList<Integer>());
@@ -561,7 +574,8 @@ public class VRPTW_ACS implements Runnable {
         temp.tour_lengths = new ArrayList<Double>();
         temp.beginService = new double[VRPTW.n + 1];
         temp.currentTime = new ArrayList<Double>();
-        temp.currentQuantity = new ArrayList<Double>();
+//        temp.currentQuantity = new ArrayList<Double>();
+        temp.currentQuantityArray = new ArrayList<double[]>();
         temp.usedVehicles = 1;
         for (int j = 0; j < temp.usedVehicles; j++) {
             temp.tours.add(j, new ArrayList<Integer>());
@@ -613,10 +627,14 @@ public class VRPTW_ACS implements Runnable {
                                 temp.tours.get(indexTourSource).remove(i);
                                 temp.tours.get(indexTourDestination).add(j, city);
 
-                                newQuantity1 = temp.currentQuantity.get(indexTourSource) - reqList.get(city + 1).getDemand();
-                                temp.currentQuantity.set(indexTourSource, newQuantity1);
-                                newQuantity2 = temp.currentQuantity.get(indexTourDestination) + reqList.get(city + 1).getDemand();
-                                temp.currentQuantity.set(indexTourDestination, newQuantity2);
+//                                newQuantity1 = temp.currentQuantity.get(indexTourSource) - reqList.get(city + 1).getDemand();
+                                newQuantityArray1 = minusDoubleArray(temp.currentQuantityArray.get(indexTourSource), reqList.get(city + 1).getDemandArray());
+//                                temp.currentQuantity.set(indexTourSource, newQuantity1);
+                                temp.currentQuantityArray.set(indexTourSource, newQuantityArray1);
+//                                newQuantity2 = temp.currentQuantity.get(indexTourDestination) + reqList.get(city + 1).getDemand();
+                                newQuantityArray2 = addDoubleArray(temp.currentQuantityArray.get(indexTourDestination), reqList.get(city + 1).getDemandArray());
+//                                temp.currentQuantity.set(indexTourDestination, newQuantity2);
+                                temp.currentQuantityArray.set(indexTourDestination, newQuantityArray2);
 
                                 //update the begin service times of the nodes from the source and destination tours of the obtained neighbour solution
                                 //also update the current time of the source and destination tours
@@ -686,7 +704,8 @@ public class VRPTW_ACS implements Runnable {
         boolean feasible = false;
         int city, sourcePrevCity, sourceNextCity = -2, destinationPrevCity, destinationNextCity;
         int startIndexSource, startIndexDestination;
-        double newQuantity1, newQuantity2, newDistance1, newDistance2, newTotalDistance;
+        double newDistance1, newDistance2, newTotalDistance;
+        double[] newQuantityArr1, newQuantityArr2;
         ArrayList<Request> reqList = instance.getRequests();
         boolean foundImprovement = true, isValid;
         int lastPos;
@@ -698,7 +717,8 @@ public class VRPTW_ACS implements Runnable {
         bestImprovedAnt.tour_lengths = new ArrayList<Double>();
         bestImprovedAnt.beginService = new double[VRPTW.n + 1];
         bestImprovedAnt.currentTime = new ArrayList<Double>();
-        bestImprovedAnt.currentQuantity = new ArrayList<Double>();
+//        bestImprovedAnt.currentQuantity = new ArrayList<Double>();
+        bestImprovedAnt.currentQuantityArray = new ArrayList<double[]>();
         bestImprovedAnt.usedVehicles = 1;
         for (int j = 0; j < bestImprovedAnt.usedVehicles; j++) {
             bestImprovedAnt.tours.add(j, new ArrayList<Integer>());
@@ -719,7 +739,7 @@ public class VRPTW_ACS implements Runnable {
         temp.tour_lengths = new ArrayList<Double>();
         temp.beginService = new double[VRPTW.n + 1];
         temp.currentTime = new ArrayList<Double>();
-        temp.currentQuantity = new ArrayList<Double>();
+        temp.currentQuantityArray = new ArrayList<double[]>();
         temp.usedVehicles = 1;
         for (int j = 0; j < temp.usedVehicles; j++) {
             temp.tours.add(j, new ArrayList<Integer>());
@@ -789,10 +809,16 @@ public class VRPTW_ACS implements Runnable {
 						    	    	System.out.println("Inside relocateMultipleRouteIterated: The resulted solution is not valid (feasible)..");
 						    	    }*/
 
-                                    newQuantity1 = temp.currentQuantity.get(indexTourSource) - reqList.get(city + 1).getDemand();
-                                    temp.currentQuantity.set(indexTourSource, newQuantity1);
-                                    newQuantity2 = temp.currentQuantity.get(indexTourDestination) + reqList.get(city + 1).getDemand();
-                                    temp.currentQuantity.set(indexTourDestination, newQuantity2);
+//                                    newQuantity1 = temp.currentQuantity.get(indexTourSource) - reqList.get(city + 1).getDemand();
+                                    newQuantityArr1 = minusDoubleArray(temp.currentQuantityArray.get(indexTourSource),reqList.get(city + 1).getDemandArray());
+//                                    temp.currentQuantity.set(indexTourSource, newQuantityArr1);
+                                    temp.currentQuantityArray.set(indexTourSource, newQuantityArr1);
+//                                    newQuantity2 = temp.currentQuantity.get(indexTourDestination) + reqList.get(city + 1).getDemand();
+                                    newQuantityArr2 = addDoubleArray(temp.currentQuantityArray.get(indexTourDestination),reqList.get(city + 1).getDemandArray());
+//                                    temp.currentQuantity.set(indexTourDestination, newQuantity2);
+                                    temp.currentQuantityArray.set(indexTourDestination, newQuantityArr2);
+//                                    temp.currentQuantity.set(indexTourDestination, newQuantity2);
+                                    temp.currentQuantityArray.set(indexTourDestination, newQuantityArr2);
 
                                     //update the begin service times of the nodes from the source and destination tours of the obtained neighbour solution
                                     //also update the current time of the source and destination tours
@@ -819,7 +845,7 @@ public class VRPTW_ACS implements Runnable {
                                         //System.out.println("Reducing with 1 the number of used vehicles");
                                         temp.tours.remove(indexTourSource);
                                         temp.tour_lengths.remove(indexTourSource);
-                                        temp.currentQuantity.remove(indexTourSource);
+                                        temp.currentQuantityArray.remove(indexTourSource);
                                         temp.currentTime.remove(indexTourSource);
                                         temp.usedVehicles--;
                                     }
@@ -873,6 +899,7 @@ public class VRPTW_ACS implements Runnable {
         int city, sourcePrevCity, sourceNextCity = -2, destinationPrevCity, destinationNextCity;
         int startIndexSource, startIndexDestination;
         double newQuantity1, newQuantity2, newDistance1, newDistance2, newTotalDistance;
+        double[] newQuantityArr1, newQuantityArr2;
         ArrayList<Request> reqList = instance.getRequests();
         boolean foundImprovement = true;
         int indexTourSource, lastPos;
@@ -882,7 +909,7 @@ public class VRPTW_ACS implements Runnable {
         improvedAnt.tour_lengths = new ArrayList<Double>();
         improvedAnt.beginService = new double[VRPTW.n + 1];
         improvedAnt.currentTime = new ArrayList<Double>();
-        improvedAnt.currentQuantity = new ArrayList<Double>();
+        improvedAnt.currentQuantityArray = new ArrayList<double[]>();
         improvedAnt.usedVehicles = 1;
         for (int j = 0; j < improvedAnt.usedVehicles; j++) {
             improvedAnt.tours.add(j, new ArrayList<Integer>());
@@ -903,7 +930,8 @@ public class VRPTW_ACS implements Runnable {
         temp.tour_lengths = new ArrayList<Double>();
         temp.beginService = new double[VRPTW.n + 1];
         temp.currentTime = new ArrayList<Double>();
-        temp.currentQuantity = new ArrayList<Double>();
+//        temp.currentQuantity = new ArrayList<Double>();
+        temp.currentQuantityArray = new ArrayList<double[]>();
         temp.usedVehicles = 1;
         for (int j = 0; j < temp.usedVehicles; j++) {
             temp.tours.add(j, new ArrayList<Integer>());
@@ -960,10 +988,17 @@ public class VRPTW_ACS implements Runnable {
                                 temp.tours.get(indexTourSource).remove(i);
                                 temp.tours.get(indexTourDestination).add(j, city);
 
-                                newQuantity1 = temp.currentQuantity.get(indexTourSource) - reqList.get(city + 1).getDemand();
-                                temp.currentQuantity.set(indexTourSource, newQuantity1);
-                                newQuantity2 = temp.currentQuantity.get(indexTourDestination) + reqList.get(city + 1).getDemand();
-                                temp.currentQuantity.set(indexTourDestination, newQuantity2);
+//                                newQuantity1 = temp.currentQuantity.get(indexTourSource) - reqList.get(city + 1).getDemand();
+//                                temp.currentQuantity.set(indexTourSource, newQuantity1);
+//                                newQuantity2 = temp.currentQuantity.get(indexTourDestination) + reqList.get(city + 1).getDemand();
+//                                temp.currentQuantity.set(indexTourDestination, newQuantity2);
+
+
+                                newQuantityArr1 = minusDoubleArray(temp.currentQuantityArray.get(indexTourSource),reqList.get(city + 1).getDemandArray());
+                                temp.currentQuantityArray.set(indexTourSource, newQuantityArr1);
+                                newQuantityArr2 = addDoubleArray(temp.currentQuantityArray.get(indexTourDestination),reqList.get(city + 1).getDemandArray());
+                                temp.currentQuantityArray.set(indexTourDestination, newQuantityArr2);
+
 
                                 //update the begin service times of the nodes from the source and destination tours of the obtained neighbour solution
                                 //also update the current time of the source and destination tours
@@ -1014,18 +1049,30 @@ public class VRPTW_ACS implements Runnable {
         boolean isFeasible = true;
         int currentCity, prevCity, city1, city2;
         double currentTime = 0.0;
-        double distance, arrivalTime, beginService, currentQuantity;
+        double distance, arrivalTime, beginService;
+        double[] currentQuantityArr;
         ArrayList<Request> reqList = vrp.getRequests();
 
         //check vehicle capacity tour constraints for source and destination tours
         city1 = a.tours.get(indexTourSource).get(i);
         city2 = a.tours.get(indexTourDestination).get(j);
-        currentQuantity = a.currentQuantity.get(indexTourSource) - reqList.get(city1 + 1).getDemand() + reqList.get(city2 + 1).getDemand();
-        if (currentQuantity > vrp.getCapacity()) {
+
+//        currentQuantity = a.currentQuantity.get(indexTourSource) - reqList.get(city1 + 1).getDemand() + reqList.get(city2 + 1).getDemand();
+//        if (currentQuantity > vrp.getCapacity()) {
+//            return false;
+//        }
+//        currentQuantity = a.currentQuantity.get(indexTourDestination) - reqList.get(city2 + 1).getDemand() + reqList.get(city1 + 1).getDemand();
+//        if (currentQuantity > vrp.getCapacity()) {
+//            return false;
+//        }
+
+
+        currentQuantityArr = addDoubleArray(minusDoubleArray(a.currentQuantityArray.get(indexTourSource),reqList.get(city1 + 1).getDemandArray()),reqList.get(city2 + 1).getDemandArray());
+        if (!compareArrayALessEqualArrayB(currentQuantityArr, vrp.getCapacityArray())) {
             return false;
         }
-        currentQuantity = a.currentQuantity.get(indexTourDestination) - reqList.get(city2 + 1).getDemand() + reqList.get(city1 + 1).getDemand();
-        if (currentQuantity > vrp.getCapacity()) {
+        currentQuantityArr = addDoubleArray(minusDoubleArray(a.currentQuantityArray.get(indexTourDestination),reqList.get(city2 + 1).getDemandArray()), reqList.get(city1 + 1).getDemandArray());
+        if (!compareArrayALessEqualArrayB(currentQuantityArr, vrp.getCapacityArray())) {
             return false;
         }
 
@@ -1124,6 +1171,7 @@ public class VRPTW_ACS implements Runnable {
         int city1, city2, sourcePrevCity, sourceNextCity = -2, destinationPrevCity, destinationNextCity;
         int startIndexSource, startIndexDestination;
         double newQuantity1, newQuantity2, newDistance1, newDistance2, newTotalDistance;
+        double[] newQuantityArr1, newQuantityArr2;
         ArrayList<Request> reqList = instance.getRequests();
         int lastPos;
 
@@ -1132,7 +1180,8 @@ public class VRPTW_ACS implements Runnable {
         bestImprovedAnt.tour_lengths = new ArrayList<Double>();
         bestImprovedAnt.beginService = new double[VRPTW.n + 1];
         bestImprovedAnt.currentTime = new ArrayList<Double>();
-        bestImprovedAnt.currentQuantity = new ArrayList<Double>();
+//        bestImprovedAnt.currentQuantity = new ArrayList<Double>();
+        bestImprovedAnt.currentQuantityArray = new ArrayList<double[]>();
         bestImprovedAnt.usedVehicles = 1;
         for (int j = 0; j < bestImprovedAnt.usedVehicles; j++) {
             bestImprovedAnt.tours.add(j, new ArrayList<Integer>());
@@ -1153,7 +1202,8 @@ public class VRPTW_ACS implements Runnable {
         temp.tour_lengths = new ArrayList<Double>();
         temp.beginService = new double[VRPTW.n + 1];
         temp.currentTime = new ArrayList<Double>();
-        temp.currentQuantity = new ArrayList<Double>();
+//        temp.currentQuantity = new ArrayList<Double>();
+        temp.currentQuantityArray = new ArrayList<double[]>();
         temp.usedVehicles = 1;
         for (int j = 0; j < temp.usedVehicles; j++) {
             temp.tours.add(j, new ArrayList<Integer>());
@@ -1206,10 +1256,17 @@ public class VRPTW_ACS implements Runnable {
                                     temp.tours.get(indexTourSource).set(i, city2);
                                     temp.tours.get(indexTourDestination).set(j, city1);
 
-                                    newQuantity1 = temp.currentQuantity.get(indexTourSource) - reqList.get(city1 + 1).getDemand() + reqList.get(city2 + 1).getDemand();
-                                    temp.currentQuantity.set(indexTourSource, newQuantity1);
-                                    newQuantity2 = temp.currentQuantity.get(indexTourDestination) - reqList.get(city2 + 1).getDemand() + reqList.get(city1 + 1).getDemand();
-                                    temp.currentQuantity.set(indexTourDestination, newQuantity2);
+//                                    newQuantity1 = temp.currentQuantity.get(indexTourSource) - reqList.get(city1 + 1).getDemand() + reqList.get(city2 + 1).getDemand();
+//                                    temp.currentQuantity.set(indexTourSource, newQuantity1);
+//                                    newQuantity2 = temp.currentQuantity.get(indexTourDestination) - reqList.get(city2 + 1).getDemand() + reqList.get(city1 + 1).getDemand();
+//                                    temp.currentQuantity.set(indexTourDestination, newQuantity2);
+
+
+                                    newQuantityArr1 = addDoubleArray(minusDoubleArray(temp.currentQuantityArray.get(indexTourSource),reqList.get(city1 + 1).getDemandArray()),reqList.get(city2 + 1).getDemandArray());
+                                    temp.currentQuantityArray.set(indexTourSource, newQuantityArr1);
+                                    newQuantityArr2 = addDoubleArray(minusDoubleArray(temp.currentQuantityArray.get(indexTourDestination),reqList.get(city2 + 1).getDemandArray()), reqList.get(city1 + 1).getDemandArray());
+                                    temp.currentQuantityArray.set(indexTourDestination, newQuantityArr2);
+
 
                                     //update the begin service times of the nodes from the source and destination tours of the obtained neighbour solution
                                     //also update the current time of the source and destination tours
@@ -1253,6 +1310,7 @@ public class VRPTW_ACS implements Runnable {
         int city1, city2, sourcePrevCity, sourceNextCity = -2, destinationPrevCity, destinationNextCity;
         int startIndexSource, startIndexDestination;
         double newQuantity1, newQuantity2, newDistance1, newDistance2, newTotalDistance;
+        double[] newQuantityArr1, newQuantityArr2;
         ArrayList<Request> reqList = instance.getRequests();
         boolean foundImprovement = true, isValid;
         int lastPos;
@@ -1264,7 +1322,8 @@ public class VRPTW_ACS implements Runnable {
         improvedAnt.tour_lengths = new ArrayList<Double>();
         improvedAnt.beginService = new double[VRPTW.n + 1];
         improvedAnt.currentTime = new ArrayList<Double>();
-        improvedAnt.currentQuantity = new ArrayList<Double>();
+//        improvedAnt.currentQuantitya = new ArrayList<Double>();
+        improvedAnt.currentQuantityArray = new ArrayList<double[]>();
         improvedAnt.usedVehicles = 1;
         for (int j = 0; j < improvedAnt.usedVehicles; j++) {
             improvedAnt.tours.add(j, new ArrayList<Integer>());
@@ -1285,7 +1344,8 @@ public class VRPTW_ACS implements Runnable {
         temp.tour_lengths = new ArrayList<Double>();
         temp.beginService = new double[VRPTW.n + 1];
         temp.currentTime = new ArrayList<Double>();
-        temp.currentQuantity = new ArrayList<Double>();
+//        temp.currentQuantity = new ArrayList<Double>();
+        temp.currentQuantityArray = new ArrayList<double[]>();
         temp.usedVehicles = 1;
         for (int j = 0; j < temp.usedVehicles; j++) {
             temp.tours.add(j, new ArrayList<Integer>());
@@ -1355,10 +1415,17 @@ public class VRPTW_ACS implements Runnable {
 							    	    	System.out.println("Inside exchangeMultipleRouteIterated: The resulted solution is not valid (feasible)..");
 							    	    }*/
 
-                                        newQuantity1 = temp.currentQuantity.get(indexTourSource) - reqList.get(city1 + 1).getDemand() + reqList.get(city2 + 1).getDemand();
-                                        temp.currentQuantity.set(indexTourSource, newQuantity1);
-                                        newQuantity2 = temp.currentQuantity.get(indexTourDestination) - reqList.get(city2 + 1).getDemand() + reqList.get(city1 + 1).getDemand();
-                                        temp.currentQuantity.set(indexTourDestination, newQuantity2);
+//                                        newQuantity1 = temp.currentQuantity.get(indexTourSource) - reqList.get(city1 + 1).getDemand() + reqList.get(city2 + 1).getDemand();
+//                                        temp.currentQuantity.set(indexTourSource, newQuantity1);
+//                                        newQuantity2 = temp.currentQuantity.get(indexTourDestination) - reqList.get(city2 + 1).getDemand() + reqList.get(city1 + 1).getDemand();
+//                                        temp.currentQuantity.set(indexTourDestination, newQuantity2);
+
+
+                                        newQuantityArr1 = addDoubleArray(minusDoubleArray(temp.currentQuantityArray.get(indexTourSource),reqList.get(city1 + 1).getDemandArray()),reqList.get(city2 + 1).getDemandArray());
+                                        temp.currentQuantityArray.set(indexTourSource, newQuantityArr1);
+                                        newQuantityArr2 = addDoubleArray(minusDoubleArray(temp.currentQuantityArray.get(indexTourDestination),reqList.get(city2 + 1).getDemandArray()), reqList.get(city1 + 1).getDemandArray());
+                                        temp.currentQuantityArray.set(indexTourDestination, newQuantityArr2);
+
 
                                         //update the begin service times of the nodes from the source and destination tours of the obtained neighbour solution
                                         //also update the current time of the source and destination tours

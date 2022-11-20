@@ -19,7 +19,7 @@ public class Controller {
     private static int workingDay = 100;
 
     //number of time slices
-    private static int noTimeSlices = 10;
+    private static int noTimeSlices = 4;
 
     public static int currentTimeSlice = 1;
     //file name to be used for input data set
@@ -27,7 +27,7 @@ public class Controller {
     public static String vrpInstance = "c102";   //r104
 
     //dynamic level, which gives the proportion of the dynamic requests (available time > 0) from the DVRPTW instance
-    private static double dynamicLevel = 0.3;  //0.0  //0.1  //0.5  //1.0
+    private static double dynamicLevel = 0.1;  //0.0  //0.1  //0.5  //1.0
 
     private static double scalingValue;
 
@@ -224,7 +224,7 @@ public class Controller {
 
         clearOutputFiles();  // 删除几个输出文件夹
 
-        for (int trial = 0; trial < 5; trial++) {
+        for (int trial = 0; trial <5; trial++) {
             //reads benchmark data; read the data from the input file
             String dvrptwInstance = vrpInstance + "-" + dynamicLevel;
             String fileName = dvrptwInstance + ".txt";
@@ -457,7 +457,7 @@ public class Controller {
 						System.out.println();
 				  }*/
                     }
-//                    System.out.println("蚁群优化前的当前最优解：" + Ants.best_so_far_ant);
+                   System.out.println("蚁群优化前的当前最优解：" + Ants.best_so_far_ant);
 //                    System.out.println("蚁群优化前的CommitNodes: " + Arrays.toString(Ants.committedNodes));
 
                     currentTimeSlice++;

@@ -62,20 +62,20 @@ public class Ants {
 		public String toString() {
 			return "\nAnt{\n" +
 					"\ttours=" + tours + "\n" +
-					"\tvisited=" + Arrays.toString(visited) + "\n" +
+//					"\tvisited=" + Arrays.toString(visited) + "\n" +
 					"\ttour_lengths=" + tour_lengths + "\n" +
-//					"\tbeginService=" + Arrays.toString(beginService) + "\n" +
+					"\tbeginService=" + Arrays.toString(beginService) + "\n" +
 					"\tusedVehicles=" + usedVehicles + "\n" +
-//					"\tcurrentTime=" + currentTime + "\n" +
+					"\tcurrentTime=" + currentTime + "\n" +
 //					"\tearliestTime=" + earliestTime + "\n" +
 //					"\tlatestTime=" + latestTime + "\n" +
 					"\tcurrentQuantity=" + currentQuantity + "\n" +
 					"\ttotal_tour_length=" + total_tour_length + "\n" +
 //					"\tlongest_tour_length=" + longest_tour_length + "\n" +
 //					"\tindexLongestTour=" + indexLongestTour + "\n" +
-					"\ttoVisit=" + toVisit + "\n" +
+//					"\ttoVisit=" + toVisit + "\n" +
 					"\tcostObjectives=" + Arrays.toString(costObjectives) + "\n" +
-					"\taddedEmptyTour=" + addedEmptyTour + "\n" +
+//					"\taddedEmptyTour=" + addedEmptyTour + "\n" +
 					'}';
 		}
 

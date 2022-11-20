@@ -37,7 +37,7 @@ public class DataReader {
             boolean foundGeneralSection = false;
             boolean foundRequestsSection = false;
 
-            File file = new File("input/" + fileName);
+            File file = new File("input_wy/" + fileName);
             BufferedReader in = null;
 
             int kk = 0;
